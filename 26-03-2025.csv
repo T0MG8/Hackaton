@@ -1,0 +1,1001 @@
+,aircraftRegistration,route.destinations,Luchthaven,Stad,Land,flightName
+0,PHHXB,HRG,Hurghada International,Hurghada,Egypte,HV5226
+1,PHHSK,DXB,Dubai International,Dubai,Verenigde Arabische Emiraten,HV6902
+2,PHYHZ,TFS,Tenerife-Sur,Tenerife,Spanje,HV6672
+3,PHYHZ,TFS,Tenerife-Sur,Tenerife,Spanje,KL2591
+4,PHYHZ,TFS,Tenerife-Sur,Tenerife,Spanje,DL7488
+5,JA16KZ,NRT,Narita,Narita,Japan,KZ004
+6,DAEAK,LEJ,Leipzig/Halle Airport,Leipzig,Duitsland,QY1446
+7,OEIXF,CDG,Charles de Gaulle,Parijs,Frankrijk,FX4235
+8,PHBQN,ICN,Incheon,Seoel & Incheon,Zuid-Korea,KE5925
+9,PHBQN,ICN,Incheon,Seoel & Incheon,Zuid-Korea,KL0856
+10,PHBQN,ICN,Incheon,Seoel & Incheon,Zuid-Korea,AF3112
+11,PHBVA,PBM,Johan Adolf Pengel,Zanderij,Suriname,KL0714
+12,PHBHI,CGK,Soekarno-Hatta Intl,Jakarta,Indonesië,MH5632
+13,PHBHI,CGK,Soekarno-Hatta Intl,Jakarta,Indonesië,KL0810
+14,PHBHI,CGK,Soekarno-Hatta Intl,Jakarta,Indonesië,AF8398
+15,PHBHI,CGK,Soekarno-Hatta Intl,Jakarta,Indonesië,GA9088
+16,PHBVI,ACC,Kotoka Accra,Accra,Ghana,KL0590
+17,PHBVI,ACC,Kotoka Accra,Accra,Ghana,AF8248
+18,PHBVI,ACC,Kotoka Accra,Accra,Ghana,DL9373
+19,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,DL0046
+20,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,AF5591
+21,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,KL6070
+22,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,VS3928
+23,PHBHM,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,KL0624
+24,PHBHM,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,DL9667
+25,PHBHM,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,VS7113
+26,PHBHM,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,AF6695
+27,PHHSM,ACE,Lanzarote,Lanzarote,Spanje,HV5685
+28,N811NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,DL0132
+29,N811NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,AF5606
+30,N811NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,KL6018
+31,N811NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,VS3929
+32,PHAOF,LOS,Murtala Muhammed,Lagos,Nigeria,KL0588
+33,PHAOF,LOS,Murtala Muhammed,Lagos,Nigeria,AF5479
+34,PHAOF,LOS,Murtala Muhammed,Lagos,Nigeria,DL9507
+35,PHHXG,DXB,Dubai International,Dubai,Verenigde Arabische Emiraten,HV6901
+36,PHHXN,FNC,Madeira,Funchal,Portugal,HV6629
+37,PHHXN,FNC,Madeira,Funchal,Portugal,DL7508
+38,PHHXN,FNC,Madeira,Funchal,Portugal,KL2697
+39,BLXD,HKG,Hongkong,Hongkong,Hongkong,CX271
+40,PHHSK,VLC,Valencia Airport,Valencia,Spanje,HV6331
+41,PHHSK,VLC,Valencia Airport,Valencia,Spanje,KL2659
+42,PHHSK,VLC,Valencia Airport,Valencia,Spanje,DL7515
+43,PHHSB,AGP,Malaga Airport,Málaga,Spanje,HV6115
+44,PHHSB,AGP,Malaga Airport,Málaga,Spanje,DL7481
+45,PHHSB,AGP,Malaga Airport,Málaga,Spanje,KL2649
+46,PHBCD,OSL,Gardermoen,Oslo,Noorwegen,DL9593
+47,PHBCD,OSL,Gardermoen,Oslo,Noorwegen,GA9478
+48,PHBCD,OSL,Gardermoen,Oslo,Noorwegen,KE6431
+49,PHBCD,OSL,Gardermoen,Oslo,Noorwegen,MF9704
+50,PHBCD,OSL,Gardermoen,Oslo,Noorwegen,SK6683
+51,PHBCD,OSL,Gardermoen,Oslo,Noorwegen,KL1197
+52,PHBCD,OSL,Gardermoen,Oslo,Noorwegen,CZ7613
+53,9VSJF,SIN,Changi,Singapore,Singapore,SQ324
+54,PHEXO,PRG,Ruzyne,Praag,Tsjechië,KL1351
+55,PHEXO,PRG,Ruzyne,Praag,Tsjechië,CI9481
+56,PHEXO,PRG,Ruzyne,Praag,Tsjechië,DL9532
+57,PHYHA,ALC,Alicante Airport,Alicante,Spanje,HV6143
+58,PHYHA,ALC,Alicante Airport,Alicante,Spanje,DL7484
+59,PHYHA,ALC,Alicante Airport,Alicante,Spanje,KL2641
+60,PHEZO,BRU,Brussels,Brussel,België,KL1701
+61,PHEZO,BRU,Brussels,Brussel,België,DL9606
+62,PHEZO,BRU,Brussels,Brussel,België,MF9353
+63,PHEZO,BRU,Brussels,Brussel,België,MU1833
+64,PHEXY,ZRH,Zurich Airport,Zurich,Zwitserland,DL9432
+65,PHEXY,ZRH,Zurich Airport,Zurich,Zwitserland,MF9724
+66,PHEXY,ZRH,Zurich Airport,Zurich,Zwitserland,KL1917
+67,PHEXY,ZRH,Zurich Airport,Zurich,Zwitserland,CZ7704
+68,PHEXY,ZRH,Zurich Airport,Zurich,Zwitserland,MU1781
+69,PHAXC,CDG,Charles de Gaulle,Parijs,Frankrijk,DL9205
+70,PHAXC,CDG,Charles de Gaulle,Parijs,Frankrijk,MU1555
+71,PHAXC,CDG,Charles de Gaulle,Parijs,Frankrijk,VN3107
+72,PHAXC,CDG,Charles de Gaulle,Parijs,Frankrijk,KL1401
+73,PHAXC,CDG,Charles de Gaulle,Parijs,Frankrijk,AF8373
+74,PHBKD,JFK,John F Kennedy Intl,New York,Verenigde Staten,KL0642
+75,PHBKD,JFK,John F Kennedy Intl,New York,Verenigde Staten,AF6715
+76,PHBKD,JFK,John F Kennedy Intl,New York,Verenigde Staten,DL9357
+77,PHBKD,JFK,John F Kennedy Intl,New York,Verenigde Staten,VS7126
+78,N816NW,MSP,Minneapolis/St Paul International,Minneapolis/St Paul,Verenigde Staten,DL0160
+79,N816NW,MSP,Minneapolis/St Paul International,Minneapolis/St Paul,Verenigde Staten,AF8975
+80,N816NW,MSP,Minneapolis/St Paul International,Minneapolis/St Paul,Verenigde Staten,KL6064
+81,N816NW,MSP,Minneapolis/St Paul International,Minneapolis/St Paul,Verenigde Staten,VS3934
+82,PHEXE,HAM,Hamburg Airport,Hamburg,Duitsland,MU1605
+83,PHEXE,HAM,Hamburg Airport,Hamburg,Duitsland,DL9327
+84,PHEXE,HAM,Hamburg Airport,Hamburg,Duitsland,KE6435
+85,PHEXE,HAM,Hamburg Airport,Hamburg,Duitsland,KL1751
+86,PHEXE,HAM,Hamburg Airport,Hamburg,Duitsland,CZ7665
+87,PHBGI,FCO,Fiumicino,Rome,Italië,GF5205
+88,PHBGI,FCO,Fiumicino,Rome,Italië,MF9395
+89,PHBGI,FCO,Fiumicino,Rome,Italië,KL1601
+90,PHBGI,FCO,Fiumicino,Rome,Italië,DL9579
+91,PHHSE,GVA,Geneva International,Genève,Zwitserland,KL1929
+92,PHHSE,GVA,Geneva International,Genève,Zwitserland,CZ7713
+93,PHHSE,GVA,Geneva International,Genève,Zwitserland,DL9618
+94,PHHSE,GVA,Geneva International,Genève,Zwitserland,KE6417
+95,PHHSE,GVA,Geneva International,Genève,Zwitserland,MF9616
+96,PHHSE,GVA,Geneva International,Genève,Zwitserland,MU1785
+97,PHNXN,ARN,Arlanda,Stockholm,Zweden,DL9183
+98,PHNXN,ARN,Arlanda,Stockholm,Zweden,MF9308
+99,PHNXN,ARN,Arlanda,Stockholm,Zweden,MU1799
+100,PHNXN,ARN,Arlanda,Stockholm,Zweden,SK6639
+101,PHNXN,ARN,Arlanda,Stockholm,Zweden,KL1215
+102,PHNXN,ARN,Arlanda,Stockholm,Zweden,CZ7619
+103,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,DL9565
+104,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,MF9385
+105,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,MU1579
+106,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,KL1797
+107,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,CZ7681
+108,PHBKC,DXB,Dubai International,Dubai,Verenigde Arabische Emiraten,KL0428
+109,PHBKC,DXB,Dubai International,Dubai,Verenigde Arabische Emiraten,AF8422
+110,PHBKC,DXB,Dubai International,Dubai,Verenigde Arabische Emiraten,DL9500
+111,OELQC,PMO,Punta Raisi,Palermo,Italië,EJU7803
+112,OELSV,LCA,Larnaca,Larnaca,Cyprus,EJU7983
+113,HBJDA,ZRH,Zurich Airport,Zurich,Zwitserland,LX737
+114,SPLIL,WAW,Frederic Chopin,Warschau,Polen,LO270
+115,SPLIL,WAW,Frederic Chopin,Warschau,Polen,B66652
+116,SEROE,CPH,Kastrup,Kopenhagen,Denemarken,SK550
+117,GEUUF,LHR,Heathrow,Londen,Verenigd Koninkrijk,BA423
+118,PHYHZ,BCN,Barcelona-el Prat,Barcelona,Spanje,HV5131
+119,PHYHZ,BCN,Barcelona-el Prat,Barcelona,Spanje,DL7487
+120,CSTVC,LIS,Lisbon Airport,Lissabon,Portugal,TP675
+121,N416MC,ORD,O'Hare International,Chicago,Verenigde Staten,5Y8158
+122,ECKLT,BCN,Barcelona-el Prat,Barcelona,Spanje,VY8308
+123,ECKLT,BCN,Barcelona-el Prat,Barcelona,Spanje,QR3521
+124,ECKLT,BCN,Barcelona-el Prat,Barcelona,Spanje,LA5745
+125,ECKLT,BCN,Barcelona-el Prat,Barcelona,Spanje,IB5222
+126,DAKJC,BRE,Bremen,Bremen,Duitsland,KL1760
+127,DAKJC,BRE,Bremen,Bremen,Duitsland,AF3142
+128,DAKJC,BRE,Bremen,Bremen,Duitsland,AM6369
+129,DAKJC,BRE,Bremen,Bremen,Duitsland,DL9460
+130,DAKJC,BRE,Bremen,Bremen,Duitsland,SK6751
+131,OELBK,VIE,Schwechat Intl,Wenen,Oostenrijk,OS378
+132,PHTFU,BVC,Rabil,Boa Vista,Kaapverdië,OR3715
+133,EIHON,LIN,Linate,Milaan,Italië,AZ119
+134,DAIUE,MUC,Münich International,München,Duitsland,LH2311
+135,PHEZW,LCY,London City Airport,Londen,Verenigd Koninkrijk,KL0977
+136,PHEZW,LCY,London City Airport,Londen,Verenigd Koninkrijk,DL9195
+137,PHEZW,LCY,London City Airport,Londen,Verenigd Koninkrijk,VS7043
+138,PHAOA,IAD,Dulles Intl,Washington,Verenigde Staten,KL0652
+139,PHAOA,IAD,Dulles Intl,Washington,Verenigde Staten,AF6697
+140,PHAOA,IAD,Dulles Intl,Washington,Verenigde Staten,DL9447
+141,PHAOA,IAD,Dulles Intl,Washington,Verenigde Staten,VS7120
+142,PHEXP,HAJ,Hannover Airport,Hannover,Duitsland,KL1786
+143,PHEXP,HAJ,Hannover Airport,Hannover,Duitsland,AM6415
+144,PHEXP,HAJ,Hannover Airport,Hannover,Duitsland,DL9531
+145,PHEXP,HAJ,Hannover Airport,Hannover,Duitsland,SK6719
+146,PHEXP,HAJ,Hannover Airport,Hannover,Duitsland,CZ7789
+147,DAMWO,DUS,Duesseldorf International,Düsseldorf,Duitsland,KL1796
+148,DAMWO,DUS,Duesseldorf International,Düsseldorf,Duitsland,DL9668
+149,DAMWO,DUS,Duesseldorf International,Düsseldorf,Duitsland,MF9384
+150,PHYHX,RAK,Menara,Marrakesh,Marokko,HV5753
+151,PHYHX,RAK,Menara,Marrakesh,Marokko,DL7511
+152,PHYHX,RAK,Menara,Marrakesh,Marokko,KL2625
+153,PHHSJ,NAP,Capodichino,Napels,Italië,KL2655
+154,PHHSJ,NAP,Capodichino,Napels,Italië,HV6411
+155,PHHSJ,NAP,Capodichino,Napels,Italië,DL7499
+156,ECLYM,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,I21796
+157,ECLYM,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,VY5167
+158,ECLYM,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,LA1778
+159,ECLYM,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,JL9418
+160,ECLYM,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,IB1796
+161,JA16KZ,MXP,Malpensa,Milaan,Italië,KZ049
+162,PHBVF,NBO,Jomo Kenyatta Intl,Nairobi,Kenia,KL0566
+163,PHBVF,NBO,Jomo Kenyatta Intl,Nairobi,Kenia,AF5191
+164,PHBVF,NBO,Jomo Kenyatta Intl,Nairobi,Kenia,DL9389
+165,PHEXB,BRU,Brussels,Brussel,België,KL1700
+166,PHEXB,BRU,Brussels,Brussel,België,AM6373
+167,PHEXB,BRU,Brussels,Brussel,België,DL9524
+168,PHEXB,BRU,Brussels,Brussel,België,KQ1720
+169,PHEXB,BRU,Brussels,Brussel,België,MF9352
+170,PHAOB,RUH,Riyad,Riyad,Saoedi-Arabië,AF3117
+171,PHAOB,RUH,Riyad,Riyad,Saoedi-Arabië,SV6339
+172,PHAOB,RUH,Riyad,Riyad,Saoedi-Arabië,KL0417
+173,PHBKL,YYZ,Toronto Pearson,"Toronto, Ontario",Canada,AF8266
+174,PHBKL,YYZ,Toronto Pearson,"Toronto, Ontario",Canada,DL9699
+175,PHBKL,YYZ,Toronto Pearson,"Toronto, Ontario",Canada,VS7164
+176,PHBKL,YYZ,Toronto Pearson,"Toronto, Ontario",Canada,KL0692
+177,ECOFU,AGP,Malaga Airport,Málaga,Spanje,VY8364
+178,ECOFU,AGP,Malaga Airport,Málaga,Spanje,QR3778
+179,ECOFU,AGP,Malaga Airport,Málaga,Spanje,IB5689
+180,ECOGE,VLC,Valencia Airport,Valencia,Spanje,VY8352
+181,ECOGE,VLC,Valencia Airport,Valencia,Spanje,QR5521
+182,ECOGE,VLC,Valencia Airport,Valencia,Spanje,IB5683
+183,PHEXR,LUX,Luxembourg,Luxemburg,Luxemburg,KL1708
+184,PHEXR,LUX,Luxembourg,Luxemburg,Luxemburg,DL9609
+185,PHEXR,LUX,Luxembourg,Luxemburg,Luxemburg,UX3752
+186,N57016,EWR,Newark Liberty Intl,New York,Verenigde Staten,UA070
+187,PHBGA,HAM,Hamburg Airport,Hamburg,Duitsland,KL1750
+188,PHBGA,HAM,Hamburg Airport,Hamburg,Duitsland,AM6246
+189,PHBGA,HAM,Hamburg Airport,Hamburg,Duitsland,CZ7780
+190,PHBGA,HAM,Hamburg Airport,Hamburg,Duitsland,DL9268
+191,PHBGA,HAM,Hamburg Airport,Hamburg,Duitsland,UX3760
+192,PHBCA,BLL,Billund,Billund,Denemarken,KL1290
+193,PHBCA,BLL,Billund,Billund,Denemarken,AF8304
+194,PHBCA,BLL,Billund,Billund,Denemarken,AZ3779
+195,PHBCA,BLL,Billund,Billund,Denemarken,DL9450
+196,PHBCA,BLL,Billund,Billund,Denemarken,G35569
+197,PHBCA,BLL,Billund,Billund,Denemarken,SK6614
+198,OELUE,TOS,Tromsø,Tromsø,Noorwegen,EJU7991
+199,DAIZC,FRA,Frankfurt International,Frankfort,Duitsland,LH1003
+200,PHNXF,LHR,Heathrow,Londen,Verenigd Koninkrijk,KL1001
+201,PHNXF,LHR,Heathrow,Londen,Verenigd Koninkrijk,CZ7601
+202,PHNXF,LHR,Heathrow,Londen,Verenigd Koninkrijk,DL9640
+203,PHNXF,LHR,Heathrow,Londen,Verenigd Koninkrijk,MF9636
+204,PHNXF,LHR,Heathrow,Londen,Verenigd Koninkrijk,VS7058
+205,PHHXF,SVQ,Sevilla Airport,Sevilla,Spanje,HV6727
+206,PHHXF,SVQ,Sevilla Airport,Sevilla,Spanje,DL7517
+207,PHHXF,SVQ,Sevilla Airport,Sevilla,Spanje,KL2685
+208,PHBXF,CDG,Charles de Gaulle,Parijs,Frankrijk,DL9206
+209,PHBXF,CDG,Charles de Gaulle,Parijs,Frankrijk,GA9240
+210,PHBXF,CDG,Charles de Gaulle,Parijs,Frankrijk,KQ1223
+211,PHBXF,CDG,Charles de Gaulle,Parijs,Frankrijk,KL1403
+212,PHBXF,CDG,Charles de Gaulle,Parijs,Frankrijk,AF5473
+213,PHBXF,CDG,Charles de Gaulle,Parijs,Frankrijk,MK7591
+214,DAPRI,NUE,Nuremberg Airport,Neurenberg,Duitsland,KL1838
+215,DAPRI,NUE,Nuremberg Airport,Neurenberg,Duitsland,AM6619
+216,DAPRI,NUE,Nuremberg Airport,Neurenberg,Duitsland,DL9650
+217,DAPRI,NUE,Nuremberg Airport,Neurenberg,Duitsland,SK6711
+218,PHBCB,DUB,Dublin International,Dublin,Ierland,KL1135
+219,PHBCB,DUB,Dublin International,Dublin,Ierland,DL9215
+220,PHBCB,DUB,Dublin International,Dublin,Ierland,MF9736
+221,PHBCB,DUB,Dublin International,Dublin,Ierland,MU1853
+222,PHYHV,FAO,Faro Airport,Faro,Portugal,HV5355
+223,PHYHV,FAO,Faro Airport,Faro,Portugal,DL7496
+224,PHYHV,FAO,Faro Airport,Faro,Portugal,KL2667
+225,PHAXD,BER,Brandenburg,Berlijn,Duitsland,CZ7702
+226,PHAXD,BER,Brandenburg,Berlijn,Duitsland,DL9441
+227,PHAXD,BER,Brandenburg,Berlijn,Duitsland,GA9767
+228,PHAXD,BER,Brandenburg,Berlijn,Duitsland,MF9328
+229,PHAXD,BER,Brandenburg,Berlijn,Duitsland,SV6345
+230,PHAXD,BER,Brandenburg,Berlijn,Duitsland,UX3758
+231,PHAXD,BER,Brandenburg,Berlijn,Duitsland,KL1770
+232,PHAXD,BER,Brandenburg,Berlijn,Duitsland,AM6219
+233,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,RO9303
+234,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,SK6600
+235,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,UX3756
+236,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,KL1266
+237,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,AM6377
+238,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,CZ7753
+239,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,DL9480
+240,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,RO9303
+241,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,SK6600
+242,PHBGM,CPH,Kastrup,Kopenhagen,Denemarken,UX3756
+243,DACJJ,AAL,Aalborg Airport,Aalborg,Denemarken,KL1282
+244,DACJJ,AAL,Aalborg Airport,Aalborg,Denemarken,AF3151
+245,DACJJ,AAL,Aalborg Airport,Aalborg,Denemarken,DL9656
+246,DACJJ,AAL,Aalborg Airport,Aalborg,Denemarken,G35621
+247,DACJJ,AAL,Aalborg Airport,Aalborg,Denemarken,KQ1328
+248,OELKC,CPH,Kastrup,Kopenhagen,Denemarken,EJU7935
+249,OELQS,LGW,Gatwick,Londen,Verenigd Koninkrijk,EJU8672
+250,PHHXA,INN,Innsbruck Airport,Innsbruck,Oostenrijk,KL2542
+251,PHHXA,INN,Innsbruck Airport,Innsbruck,Oostenrijk,HV6601
+252,PHHXA,INN,Innsbruck Airport,Innsbruck,Oostenrijk,DL7507
+253,DAGMP,STR,Stuttgart Airport,Stuttgart,Duitsland,KL1826
+254,DAGMP,STR,Stuttgart Airport,Stuttgart,Duitsland,AM6649
+255,DAGMP,STR,Stuttgart Airport,Stuttgart,Duitsland,DL9696
+256,DAGMP,STR,Stuttgart Airport,Stuttgart,Duitsland,SK6693
+257,PHMPS,MIA,Miami International,Miami,Verenigde Staten,MP6131
+258,PHNXJ,SVG,Stavanger Sola,Stavanger,Noorwegen,KL1172
+259,PHNXJ,SVG,Stavanger Sola,Stavanger,Noorwegen,DL9416
+260,PHNXJ,SVG,Stavanger Sola,Stavanger,Noorwegen,KQ1196
+261,PHNXJ,SVG,Stavanger Sola,Stavanger,Noorwegen,KL1172
+262,PHNXJ,SVG,Stavanger Sola,Stavanger,Noorwegen,AZ3765
+263,PHEXH,BSL,EuroAirport Swiss,Bazel,Zwitserland,KL1942
+264,PHEXH,BSL,EuroAirport Swiss,Bazel,Zwitserland,AF3195
+265,PHEXH,BSL,EuroAirport Swiss,Bazel,Zwitserland,DL9246
+266,PHEXH,BSL,EuroAirport Swiss,Bazel,Zwitserland,G35581
+267,PHEXH,BSL,EuroAirport Swiss,Bazel,Zwitserland,KQ1986
+268,PHEXH,BSL,EuroAirport Swiss,Bazel,Zwitserland,MU1790
+269,PHEXH,BSL,EuroAirport Swiss,Bazel,Zwitserland,SK6783
+270,PHEZH,GOT,Landvetter,Gotenburg,Zweden,KL1228
+271,PHEZH,GOT,Landvetter,Gotenburg,Zweden,DL9526
+272,PHEZH,GOT,Landvetter,Gotenburg,Zweden,G35588
+273,PHEZH,GOT,Landvetter,Gotenburg,Zweden,RO9311
+274,PHHSD,PRG,Ruzyne,Praag,Tsjechië,KL1350
+275,PHHSD,PRG,Ruzyne,Praag,Tsjechië,CI9488
+276,PHHSD,PRG,Ruzyne,Praag,Tsjechië,DL9405
+277,PHHSD,PRG,Ruzyne,Praag,Tsjechië,GA9531
+278,PHAKB,MIA,Miami International,Miami,Verenigde Staten,DL9669
+279,PHAKB,MIA,Miami International,Miami,Verenigde Staten,VS7138
+280,PHAKB,MIA,Miami International,Miami,Verenigde Staten,KL0628
+281,PHAKB,MIA,Miami International,Miami,Verenigde Staten,AF8461
+282,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,DL9209
+283,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,EY7321
+284,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,KL1267
+285,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,CZ7626
+286,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,GA9758
+287,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,KE6441
+288,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,MF9371
+289,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,MU1795
+290,PHBXM,CPH,Kastrup,Kopenhagen,Denemarken,SK6601
+291,PHBCK,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,KL1501
+292,PHBCK,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,CZ7643
+293,PHBCK,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,DL9360
+294,PHBCK,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,MF9650
+295,PHBCK,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,MU1845
+296,PHBCK,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,UX3766
+297,N809NW,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,DL0072
+298,N809NW,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,AF3641
+299,N809NW,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,KL6072
+300,N809NW,ATL,Hartsfield-Jackson Int,Atlanta,Verenigde Staten,VS3932
+301,PHBKF,JRO,Kilimanjaro International,Kilimanjaro,Tanzania,KL0571
+302,PHBKF,JRO,Kilimanjaro International,Kilimanjaro,Tanzania,DL9244
+303,PHAKD,IAH,George Bush Intercont.,Houston,Verenigde Staten,KL0662
+304,PHAKD,IAH,George Bush Intercont.,Houston,Verenigde Staten,AF8412
+305,PHAKD,IAH,George Bush Intercont.,Houston,Verenigde Staten,DL9459
+306,PHAKD,IAH,George Bush Intercont.,Houston,Verenigde Staten,VS7122
+307,PHEZY,MUC,Münich International,München,Duitsland,KL1849
+308,PHEZY,MUC,Münich International,München,Duitsland,CZ7745
+309,PHEZY,MUC,Münich International,München,Duitsland,DL9368
+310,PHEZY,MUC,Münich International,München,Duitsland,GA9017
+311,PHEZY,MUC,Münich International,München,Duitsland,KE6499
+312,PHEZY,MUC,Münich International,München,Duitsland,MF9682
+313,PHEZY,MUC,Münich International,München,Duitsland,MU1593
+314,PHEXW,BGO,Bergen Flesland,Bergen,Noorwegen,DL9192
+315,PHEXW,BGO,Bergen Flesland,Bergen,Noorwegen,KQ1185
+316,PHEXW,BGO,Bergen Flesland,Bergen,Noorwegen,KL1163
+317,OELSA,STN,Stansted,Londen,Verenigd Koninkrijk,EJU7839
+318,PHBXH,BGO,Bergen Flesland,Bergen,Noorwegen,KL1162
+319,PHBXH,BGO,Bergen Flesland,Bergen,Noorwegen,DL9442
+320,PHBXH,BGO,Bergen Flesland,Bergen,Noorwegen,G35682
+321,PHBXH,BGO,Bergen Flesland,Bergen,Noorwegen,KQ1184
+322,PHNXW,BOD,Merignac,Bordeaux,Frankrijk,KL1440
+323,PHNXW,BOD,Merignac,Bordeaux,Frankrijk,AF8302
+324,PHNXW,BOD,Merignac,Bordeaux,Frankrijk,DL9303
+325,PHNXW,BOD,Merignac,Bordeaux,Frankrijk,G35627
+326,PHNXW,BOD,Merignac,Bordeaux,Frankrijk,KQ1316
+327,PHNXW,BOD,Merignac,Bordeaux,Frankrijk,SK6777
+328,PHEZV,NTE,Atlantique,Nantes,Frankrijk,KL1418
+329,PHEZV,NTE,Atlantique,Nantes,Frankrijk,AF3214
+330,PHEZV,NTE,Atlantique,Nantes,Frankrijk,DL9292
+331,PHBKH,BOM,Chhatrapati Shivaji,Mumbai,India,KL0878
+332,PHBKH,BOM,Chhatrapati Shivaji,Mumbai,India,AF3132
+333,PHBKH,BOM,Chhatrapati Shivaji,Mumbai,India,DL9495
+334,PHBVU,CUR,Hato Intl,Curaçao,Curaçao,KL0736
+335,PHBVU,CUR,Hato Intl,Curaçao,Curaçao,AF8392
+336,A7BFT,MIA,Miami International,Miami,Verenigde Staten,QR8099
+337,A7BFD,PTY,Tocumen,Panama-Stad,Panama,QR8158
+338,OEIVL,FUE,,,,EJU7881
+339,B1340,NKG,,,,Y87411
+340,B18915,TPE,Taiwan Taoyuan,Taipei,Taiwan,CI0073
+341,B18915,TPE,Taiwan Taoyuan,Taipei,Taiwan,KL0210
+342,B18915,TPE,Taiwan Taoyuan,Taipei,Taiwan,UX3000
+343,PHBKG,PDX,Portland International,Portland,Verenigde Staten,KL0616
+344,PHBKG,PDX,Portland International,Portland,Verenigde Staten,AF5196
+345,PHBKG,PDX,Portland International,Portland,Verenigde Staten,DL9219
+346,PHBKG,PDX,Portland International,Portland,Verenigde Staten,VS7153
+347,A6EGJ,DXB,Dubai International,Dubai,Verenigde Arabische Emiraten,EK145
+348,PHEXR,SVG,Stavanger Sola,Stavanger,Noorwegen,KL1173
+349,PHEXR,SVG,Stavanger Sola,Stavanger,Noorwegen,DL9411
+350,PHEXR,SVG,Stavanger Sola,Stavanger,Noorwegen,MH5651
+351,PHEXG,LPI,Linkoping City Airport,Linköping,Zweden,KL1242
+352,PHEXG,LPI,Linkoping City Airport,Linköping,Zweden,AF8372
+353,PHEXG,LPI,Linkoping City Airport,Linköping,Zweden,DL9605
+354,PHEXG,LPI,Linkoping City Airport,Linköping,Zweden,G35690
+355,PHEXG,LPI,Linkoping City Airport,Linköping,Zweden,KQ1178
+356,PHEXG,LPI,Linkoping City Airport,Linköping,Zweden,SK6790
+357,PHEXK,KRS,Kristiansand Kjevik,Kristiansand,Noorwegen,KL1184
+358,PHEXK,KRS,Kristiansand Kjevik,Kristiansand,Noorwegen,AF8273
+359,PHEXK,KRS,Kristiansand Kjevik,Kristiansand,Noorwegen,AZ3801
+360,PHEXK,KRS,Kristiansand Kjevik,Kristiansand,Noorwegen,DL9557
+361,PHEXK,KRS,Kristiansand Kjevik,Kristiansand,Noorwegen,G35700
+362,PHEXK,KRS,Kristiansand Kjevik,Kristiansand,Noorwegen,KQ1208
+363,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,KL1029
+364,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,CZ7607
+365,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,DL9363
+366,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,GA9760
+367,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,KE6423
+368,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,MF9660
+369,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,MU1621
+370,PHBXP,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,VS7077
+371,DAKJC,STR,Stuttgart Airport,Stuttgart,Duitsland,SK6690
+372,DAKJC,STR,Stuttgart Airport,Stuttgart,Duitsland,KL1827
+373,DAKJC,STR,Stuttgart Airport,Stuttgart,Duitsland,DL9406
+374,DAMWO,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,KL0911
+375,DAMWO,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,DL9377
+376,DAMWO,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,VS6907
+377,B222S,PVG,Pudong Sjanghai,Shanghai,China,CA1039
+378,PHNXV,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,KL0935
+379,PHNXV,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,DL9683
+380,PHNXV,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,MF9759
+381,PHNXV,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,VS6988
+382,PHBCE,OTP,Henri Coandă,Boekarest,Roemenië,KL1372
+383,PHBCE,OTP,Henri Coandă,Boekarest,Roemenië,DL9679
+384,PHBCE,OTP,Henri Coandă,Boekarest,Roemenië,RO9367
+385,PHBCE,OTP,Henri Coandă,Boekarest,Roemenië,SK6811
+386,FHZUT,CDG,Charles de Gaulle,Parijs,Frankrijk,AF1436
+387,FHZUT,CDG,Charles de Gaulle,Parijs,Frankrijk,KL2435
+388,PHNXR,KRK,John Paul II - Balice,Krakau,Polen,KL1322
+389,PHNXR,KRK,John Paul II - Balice,Krakau,Polen,AF3138
+390,PHNXR,KRK,John Paul II - Balice,Krakau,Polen,DL9592
+391,PHNXR,KRK,John Paul II - Balice,Krakau,Polen,UX3748
+392,PHEXB,GOT,Landvetter,Gotenburg,Zweden,KL1229
+393,PHEXB,GOT,Landvetter,Gotenburg,Zweden,DL9240
+394,PHEXB,GOT,Landvetter,Gotenburg,Zweden,MH5645
+395,PHEZS,LCY,London City Airport,Londen,Verenigd Koninkrijk,KL0979
+396,PHEZS,LCY,London City Airport,Londen,Verenigd Koninkrijk,DL9344
+397,PHEZS,LCY,London City Airport,Londen,Verenigd Koninkrijk,VS7042
+398,PHBGA,BER,Brandenburg,Berlijn,Duitsland,KE6427
+399,PHBGA,BER,Brandenburg,Berlijn,Duitsland,MF9329
+400,PHBGA,BER,Brandenburg,Berlijn,Duitsland,MU1599
+401,PHBGA,BER,Brandenburg,Berlijn,Duitsland,CZ7670
+402,PHBGA,BER,Brandenburg,Berlijn,Duitsland,DL9350
+403,PHBGA,BER,Brandenburg,Berlijn,Duitsland,GA9766
+404,PHBGA,BER,Brandenburg,Berlijn,Duitsland,KL1771
+405,DAILE,FRA,Frankfurt International,Frankfort,Duitsland,LH986
+406,N641UA,IAD,Dulles Intl,Washington,Verenigde Staten,UA946
+407,GLCYL,LCY,London City Airport,Londen,Verenigd Koninkrijk,BA8450
+408,N430DX,BOS,Edward L. Logan Intl,Boston,Verenigde Staten,DL0242
+409,N430DX,BOS,Edward L. Logan Intl,Boston,Verenigde Staten,AF3607
+410,N430DX,BOS,Edward L. Logan Intl,Boston,Verenigde Staten,KL6016
+411,N430DX,BOS,Edward L. Logan Intl,Boston,Verenigde Staten,VS3931
+412,PHNXS,TLS,Blagnac,Toulouse,Frankrijk,KL1448
+413,PHNXS,TLS,Blagnac,Toulouse,Frankrijk,AF3118
+414,PHNXS,TLS,Blagnac,Toulouse,Frankrijk,DL9249
+415,PHNXS,TLS,Blagnac,Toulouse,Frankrijk,G35511
+416,PHNXS,TLS,Blagnac,Toulouse,Frankrijk,MU1568
+417,PHNXS,TLS,Blagnac,Toulouse,Frankrijk,SK6789
+418,PHEXU,NWI,Norwich International,Norwich,Verenigd Koninkrijk,KL1054
+419,PHEXU,NWI,Norwich International,Norwich,Verenigd Koninkrijk,AF3204
+420,PHEXU,NWI,Norwich International,Norwich,Verenigd Koninkrijk,G35604
+421,PHEXU,NWI,Norwich International,Norwich,Verenigd Koninkrijk,KQ1516
+422,PHEXU,NWI,Norwich International,Norwich,Verenigd Koninkrijk,KL1054
+423,PHEXU,NWI,Norwich International,Norwich,Verenigd Koninkrijk,AF3204
+424,PHEXU,NWI,Norwich International,Norwich,Verenigd Koninkrijk,VS6914
+425,PHEXT,FRA,Frankfurt International,Frankfort,Duitsland,KL1814
+426,PHEXT,FRA,Frankfurt International,Frankfort,Duitsland,AM6385
+427,PHEXT,FRA,Frankfurt International,Frankfort,Duitsland,CZ7795
+428,PHEXT,FRA,Frankfurt International,Frankfort,Duitsland,DL9515
+429,PHEXT,FRA,Frankfurt International,Frankfort,Duitsland,GA9083
+430,PHEXT,FRA,Frankfurt International,Frankfort,Duitsland,MF9603
+431,PHEXT,FRA,Frankfurt International,Frankfort,Duitsland,SK6651
+432,DAEAI,STN,Stansted,Londen,Verenigd Koninkrijk,QY1443
+433,PHEXP,SOU,Southampton,Southampton,Verenigd Koninkrijk,WA1069
+434,PHEXP,SOU,Southampton,Southampton,Verenigd Koninkrijk,KL1069
+435,DACJJ,BRS,Bristol,Bristol,Verenigd Koninkrijk,KL1075
+436,DACJJ,BRS,Bristol,Bristol,Verenigd Koninkrijk,DL9298
+437,DACJJ,BRS,Bristol,Bristol,Verenigd Koninkrijk,VS6953
+438,DAGMP,NUE,Nuremberg Airport,Neurenberg,Duitsland,KL1841
+439,DAGMP,NUE,Nuremberg Airport,Neurenberg,Duitsland,DL9338
+440,DAGMP,NUE,Nuremberg Airport,Neurenberg,Duitsland,SK6716
+441,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,MU1939
+442,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,SK6732
+443,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,VS6975
+444,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,CZ7721
+445,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,DL9584
+446,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,KQ1277
+447,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,MF9746
+448,PHNXJ,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,KL0923
+449,N803NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,DL0134
+450,N803NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,AF5605
+451,N803NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,KL6119
+452,N803NW,DTW,Detroit Metropolitan Wayne Co.,Detroit,Verenigde Staten,VS3930
+453,N422DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,DL0048
+454,N422DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,AF5590
+455,N422DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,KL6007
+456,N422DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,VS3938
+457,PHEXS,WRO,Nicolaus Copernicus,Wroclaw,Polen,KL1336
+458,PHEXS,WRO,Nicolaus Copernicus,Wroclaw,Polen,DL9686
+459,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,AZ3751
+460,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,DL9625
+461,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,G35537
+462,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,VS7084
+463,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,KL0962
+464,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,AF3197
+465,PHBXB,WAW,Frederic Chopin,Warschau,Polen,DL9274
+466,PHBXB,WAW,Frederic Chopin,Warschau,Polen,KQ1364
+467,PHBXB,WAW,Frederic Chopin,Warschau,Polen,UX3749
+468,PHBXB,WAW,Frederic Chopin,Warschau,Polen,CZ7758
+469,PHBXB,WAW,Frederic Chopin,Warschau,Polen,KL1310
+470,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,KL0970
+471,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,AF3202
+472,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,AZ3754
+473,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,DL9542
+474,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,G35635
+475,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,KQ1486
+476,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,VS7004
+477,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,CI8598
+478,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,CZ7734
+479,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,DL9626
+480,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,GA9761
+481,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,G35596
+482,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,JU7641
+483,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,MF9659
+484,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,MU1620
+485,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,VS7070
+486,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,AZ3768
+487,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,BT6018
+488,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,KL1028
+489,PHAXB,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,AM6409
+490,PHBHE,YYC,Calgary,"Calgary, Alberta",Canada,KL0678
+491,PHBHE,YYC,Calgary,"Calgary, Alberta",Canada,AF3160
+492,PHBHE,YYC,Calgary,"Calgary, Alberta",Canada,DL9390
+493,PHBHE,YYC,Calgary,"Calgary, Alberta",Canada,VS7160
+494,PHEZA,BCN,Barcelona-el Prat,Barcelona,Spanje,DL9188
+495,PHEZA,BCN,Barcelona-el Prat,Barcelona,Spanje,GA9248
+496,PHEZA,BCN,Barcelona-el Prat,Barcelona,Spanje,KE6405
+497,PHEZA,BCN,Barcelona-el Prat,Barcelona,Spanje,MF9319
+498,PHEZA,BCN,Barcelona-el Prat,Barcelona,Spanje,MU1839
+499,PHEZA,BCN,Barcelona-el Prat,Barcelona,Spanje,KL1511
+500,PHEZA,BCN,Barcelona-el Prat,Barcelona,Spanje,CZ7649
+501,GCMPI,BRS,Bristol,Bristol,Verenigd Koninkrijk,DL9461
+502,GCMPI,BRS,Bristol,Bristol,Verenigd Koninkrijk,G35570
+503,GCMPI,BRS,Bristol,Bristol,Verenigd Koninkrijk,KQ1050
+504,GCMPI,BRS,Bristol,Bristol,Verenigd Koninkrijk,VS6948
+505,GCMPI,BRS,Bristol,Bristol,Verenigd Koninkrijk,KL1074
+506,GCMPI,BRS,Bristol,Bristol,Verenigd Koninkrijk,AZ3738
+507,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,G35587
+508,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,KQ1276
+509,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,MF9745
+510,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,BT6024
+511,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,CZ1365
+512,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,DL9501
+513,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,SK6735
+514,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,VS6968
+515,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,KL0922
+516,PHBCH,EDI,Edinburgh Airport,Edinburgh,Verenigd Koninkrijk,AZ3741
+517,PHBCL,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,G35599
+518,PHBCL,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,VS7092
+519,PHBCL,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,KL0952
+520,PHBCL,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,DL9646
+521,PHBCA,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,KL1041
+522,PHBCA,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,DL9210
+523,PHBCA,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,MU1645
+524,PHBCA,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,VS6941
+525,PHEZV,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,KL0953
+526,PHEZV,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,DL9689
+527,PHEZV,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,MU1933
+528,PHEZV,NCL,Newcastle International,Newcastle,Verenigd Koninkrijk,VS7097
+529,PHBVC,DEL,Indira Gandhi,Delhi,India,KL0872
+530,PHBVC,DEL,Indira Gandhi,Delhi,India,AF8440
+531,PHBVC,DEL,Indira Gandhi,Delhi,India,DL9336
+532,PHEXI,TRN,Caselle,Turijn,Italië,MU1830
+533,PHEXI,TRN,Caselle,Turijn,Italië,SK6823
+534,PHEXI,TRN,Caselle,Turijn,Italië,KL1638
+535,PHEXI,TRN,Caselle,Turijn,Italië,DL9261
+536,PHEXI,TRN,Caselle,Turijn,Italië,G35571
+537,PHEXI,TRN,Caselle,Turijn,Italië,KQ1554
+538,OELSU,LIN,Linate,Milaan,Italië,EJU7830
+539,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,KL1510
+540,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,AM6356
+541,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,CI8588
+542,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,CZ7767
+543,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,DL9438
+544,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,GA9247
+545,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,G35681
+546,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,KQ1662
+547,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,MF9318
+548,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,MU1840
+549,PHBGF,BCN,Barcelona-el Prat,Barcelona,Spanje,SV6340
+550,PHEXH,AAL,Aalborg Airport,Aalborg,Denemarken,KL1283
+551,PHEXH,AAL,Aalborg Airport,Aalborg,Denemarken,DL9179
+552,DAPRI,FRA,Frankfurt International,Frankfort,Duitsland,MF9604
+553,DAPRI,FRA,Frankfurt International,Frankfort,Duitsland,SK6638
+554,DAPRI,FRA,Frankfurt International,Frankfort,Duitsland,VN3150
+555,DAPRI,FRA,Frankfurt International,Frankfort,Duitsland,KL1815
+556,DAPRI,FRA,Frankfurt International,Frankfort,Duitsland,DL9234
+557,DAPRI,FRA,Frankfurt International,Frankfort,Duitsland,GA9234
+558,DAPRI,FRA,Frankfurt International,Frankfort,Duitsland,GF5203
+559,PHBGH,LIN,Linate,Milaan,Italië,KL1612
+560,PHBGH,LIN,Linate,Milaan,Italië,DL9588
+561,PHBGH,LIN,Linate,Milaan,Italië,KQ1618
+562,PHBGH,LIN,Linate,Milaan,Italië,MF9673
+563,PHBVP,DPS,Ngurah Rai,Denpasar,Indonesië,KL0836
+564,PHBVP,DPS,Ngurah Rai,Denpasar,Indonesië,AF8218
+565,PHBVP,DPS,Ngurah Rai,Denpasar,Indonesië,QF4235
+566,PHEZP,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,KL1018
+567,PHEZP,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,AF5132
+568,PHEZP,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,AZ3761
+569,PHEZP,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,DL9560
+570,PHEZP,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,G35531
+571,PHEZP,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,KQ1540
+572,PHEZP,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,VS6994
+573,PHEZX,GDN,Lech Walesa,Gdańsk,Polen,KL1302
+574,PHEZX,GDN,Lech Walesa,Gdańsk,Polen,AF8319
+575,PHEZX,GDN,Lech Walesa,Gdańsk,Polen,DL9394
+576,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,KL1196
+577,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,AM6427
+578,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,CZ7740
+579,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,DL9673
+580,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,GA9211
+581,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,G35608
+582,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,KQ1142
+583,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,MF9703
+584,PHBXG,OSL,Gardermoen,Oslo,Noorwegen,SK6680
+585,PHBQH,CUN,Cancun International,Cancún,Mexico,KL0690
+586,PHBQH,CUN,Cancun International,Cancún,Mexico,VS7178
+587,PHTFT,RMF,Marsa Alam International,Marsa Alam,Egypte,OR3451
+588,PHHSD,LIS,Lisbon Airport,Lissabon,Portugal,KL1579
+589,PHHSD,LIS,Lisbon Airport,Lissabon,Portugal,DL9349
+590,PHHSD,LIS,Lisbon Airport,Lissabon,Portugal,G35539
+591,PHHSD,LIS,Lisbon Airport,Lissabon,Portugal,KE6439
+592,PHAXD,ARN,Arlanda,Stockholm,Zweden,KL1217
+593,PHAXD,ARN,Arlanda,Stockholm,Zweden,CZ7621
+594,PHAXD,ARN,Arlanda,Stockholm,Zweden,DL9595
+595,PHAXD,ARN,Arlanda,Stockholm,Zweden,KE6419
+596,PHAXD,ARN,Arlanda,Stockholm,Zweden,MF9310
+597,PHAXD,ARN,Arlanda,Stockholm,Zweden,MH5635
+598,PHAXD,ARN,Arlanda,Stockholm,Zweden,SK6641
+599,PHBXD,LHR,Heathrow,Londen,Verenigd Koninkrijk,KL1003
+600,PHBXD,LHR,Heathrow,Londen,Verenigd Koninkrijk,CZ7602
+601,PHBXD,LHR,Heathrow,Londen,Verenigd Koninkrijk,DL9232
+602,PHBXD,LHR,Heathrow,Londen,Verenigd Koninkrijk,GA9370
+603,PHBXD,LHR,Heathrow,Londen,Verenigd Koninkrijk,VS7059
+604,PHBXD,LHR,Heathrow,Londen,Verenigd Koninkrijk,WS5201
+605,PHNXW,BLL,Billund,Billund,Denemarken,DL9198
+606,PHNXW,BLL,Billund,Billund,Denemarken,SK6615
+607,PHNXW,BLL,Billund,Billund,Denemarken,KL1291
+608,IADJV,MUC,Münich International,München,Duitsland,EN8380
+609,PHBCG,ATH,Eleftherios Venizelos,Athene,Griekenland,KL1952
+610,PHBCG,ATH,Eleftherios Venizelos,Athene,Griekenland,CZ7697
+611,PHBCG,ATH,Eleftherios Venizelos,Athene,Griekenland,DL9436
+612,PHBCG,ATH,Eleftherios Venizelos,Athene,Griekenland,KQ1572
+613,PHBCG,ATH,Eleftherios Venizelos,Athene,Griekenland,MF9312
+614,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,MK9390
+615,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,UU8240
+616,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,AF1240
+617,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,AM5827
+618,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,CI9290
+619,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,DL8400
+620,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,GA9557
+621,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,G35024
+622,FHZUK,CDG,Charles de Gaulle,Parijs,Frankrijk,KL2002
+623,N643UA,IAH,George Bush Intercont.,Houston,Verenigde Staten,UA020
+624,PHBXZ,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,KL1040
+625,PHBXZ,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,G35545
+626,PHBXZ,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,KQ1420
+627,PHBXZ,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,MU1648
+628,PHBXZ,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,VS6934
+629,PHBXZ,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,BT6033
+630,PHBXZ,BHX,Birmingham Airport,Birmingham,Verenigd Koninkrijk,DL9449
+631,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,DL9639
+632,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,GA9527
+633,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,G35598
+634,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,KQ1254
+635,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,MF9693
+636,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,MU1566
+637,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,KL1472
+638,PHEZF,NCE,Cote d'Azur,Nice,Frankrijk,AF3175
+639,PHBXL,DUB,Dublin International,Dublin,Ierland,KL1134
+640,PHBXL,DUB,Dublin International,Dublin,Ierland,DL9491
+641,PHBXL,DUB,Dublin International,Dublin,Ierland,G35586
+642,PHBXL,DUB,Dublin International,Dublin,Ierland,KQ0932
+643,PHBXL,DUB,Dublin International,Dublin,Ierland,MF9735
+644,PHBXL,DUB,Dublin International,Dublin,Ierland,MU1856
+645,PHEZZ,BLQ,Guglielmo Marconi,Bologna,Italië,G35575
+646,PHEZZ,BLQ,Guglielmo Marconi,Bologna,Italië,MF9344
+647,PHEZZ,BLQ,Guglielmo Marconi,Bologna,Italië,MU1814
+648,PHEZZ,BLQ,Guglielmo Marconi,Bologna,Italië,KL1660
+649,PHEZZ,BLQ,Guglielmo Marconi,Bologna,Italië,DL9456
+650,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,KQ1470
+651,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,MF9755
+652,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,MU1628
+653,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,VS6982
+654,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,AM6391
+655,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,AZ3745
+656,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,DL9517
+657,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,G35533
+658,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,KL0934
+659,PHBXY,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,AF3201
+660,PHNXO,BEG,Belgrado Nikola Tesla,Belgrado,Servië,JU7634
+661,PHNXO,BEG,Belgrado Nikola Tesla,Belgrado,Servië,SK6807
+662,PHNXO,BEG,Belgrado Nikola Tesla,Belgrado,Servië,KL1982
+663,PHNXO,BEG,Belgrado Nikola Tesla,Belgrado,Servië,DL9335
+664,PHBQK,PBM,Johan Adolf Pengel,Zanderij,Suriname,KL0713
+665,EIKDE,GUW,Atyrau,Atıraw,Kazachstan,KC903
+666,4LGTI,TBS,Luchthaven Tbilisi,Tbilisi,Georgië,RM1651
+667,4LGTI,TBS,Luchthaven Tbilisi,Tbilisi,Georgië,A90651
+668,4LGTI,TBS,Luchthaven Tbilisi,Tbilisi,Georgië,KL3109
+669,PHNXU,VCE,Marco Polo,Venetië,Italië,DL9265
+670,PHNXU,VCE,Marco Polo,Venetië,Italië,GA9487
+671,PHNXU,VCE,Marco Polo,Venetië,Italië,G35573
+672,PHNXU,VCE,Marco Polo,Venetië,Italië,KQ1650
+673,PHNXU,VCE,Marco Polo,Venetië,Italië,KL1628
+674,PHNXU,VCE,Marco Polo,Venetië,Italië,AM6459
+675,PHNXU,VCE,Marco Polo,Venetië,Italië,MF9767
+676,PHNXU,VCE,Marco Polo,Venetië,Italië,MU1826
+677,PHEZC,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,AZ3736
+678,PHEZC,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,DL9174
+679,PHEZC,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,G35529
+680,PHEZC,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,KQ1440
+681,PHEZC,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,VS6900
+682,PHEZC,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,KL0910
+683,PHEZC,ABZ,Dyce,Aberdeen,Verenigd Koninkrijk,AF8366
+684,PHBGQ,MRS,Provence,Marseille,Frankrijk,DL9177
+685,PHBGQ,MRS,Provence,Marseille,Frankrijk,SK6759
+686,PHBGQ,MRS,Provence,Marseille,Frankrijk,KL1464
+687,PHBGQ,MRS,Provence,Marseille,Frankrijk,AF3180
+688,PHEXA,VLC,Valencia Airport,Valencia,Spanje,KL1530
+689,PHEXA,VLC,Valencia Airport,Valencia,Spanje,AF8236
+690,PHEXA,VLC,Valencia Airport,Valencia,Spanje,CI8580
+691,PHEXA,VLC,Valencia Airport,Valencia,Spanje,DL9273
+692,PHEXA,VLC,Valencia Airport,Valencia,Spanje,G35610
+693,PHEXA,VLC,Valencia Airport,Valencia,Spanje,MU1850
+694,PHEXA,VLC,Valencia Airport,Valencia,Spanje,SK6815
+695,PHNXM,ZAG,Franjo Tudman,Zagreb,Kroatië,KL1964
+696,PHNXM,ZAG,Franjo Tudman,Zagreb,Kroatië,DL9446
+697,PHNXM,ZAG,Franjo Tudman,Zagreb,Kroatië,SK6819
+698,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,KL1500
+699,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,CZ7762
+700,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,DL9616
+701,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,EY7343
+702,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,GA9493
+703,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,G35691
+704,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,KQ1698
+705,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,MF9649
+706,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,MU1846
+707,PHBXW,MAD,Adolfo Suarez-Barajas,Madrid,Spanje,SK6703
+708,PHBXA,ARN,Arlanda,Stockholm,Zweden,KL1214
+709,PHBXA,ARN,Arlanda,Stockholm,Zweden,AM6351
+710,PHBXA,ARN,Arlanda,Stockholm,Zweden,AZ3804
+711,PHBXA,ARN,Arlanda,Stockholm,Zweden,CZ7747
+712,PHBXA,ARN,Arlanda,Stockholm,Zweden,DL9435
+713,PHBXA,ARN,Arlanda,Stockholm,Zweden,GA9763
+714,PHBXA,ARN,Arlanda,Stockholm,Zweden,G35562
+715,PHBXA,ARN,Arlanda,Stockholm,Zweden,MF9300
+716,PHBXA,ARN,Arlanda,Stockholm,Zweden,RO9301
+717,PHBXA,ARN,Arlanda,Stockholm,Zweden,SK6626
+718,PHBXA,ARN,Arlanda,Stockholm,Zweden,UX3744
+719,DAILE,FRA,Frankfurt International,Frankfort,Duitsland,LH987
+720,PHEZH,LCY,London City Airport,Londen,Verenigd Koninkrijk,KL0981
+721,PHEZH,LCY,London City Airport,Londen,Verenigd Koninkrijk,DL9285
+722,PHEZH,LCY,London City Airport,Londen,Verenigd Koninkrijk,VS7034
+723,PHBXK,FCO,Fiumicino,Rome,Italië,G35630
+724,PHBXK,FCO,Fiumicino,Rome,Italië,KQ1596
+725,PHBXK,FCO,Fiumicino,Rome,Italië,MF9394
+726,PHBXK,FCO,Fiumicino,Rome,Italië,KL1600
+727,PHBXK,FCO,Fiumicino,Rome,Italië,AM6383
+728,PHBXK,FCO,Fiumicino,Rome,Italië,DL9506
+729,PHBXK,FCO,Fiumicino,Rome,Italië,GA9087
+730,PHBXO,BUD,Liszt Ferenc Int'l,Boedapest,Hongarije,KL1362
+731,PHBXO,BUD,Liszt Ferenc Int'l,Boedapest,Hongarije,DL9293
+732,PHBXO,BUD,Liszt Ferenc Int'l,Boedapest,Hongarije,MF9360
+733,PHBXO,BUD,Liszt Ferenc Int'l,Boedapest,Hongarije,SK6743
+734,PHBXS,MUC,Münich International,München,Duitsland,GA9289
+735,PHBXS,MUC,Münich International,München,Duitsland,MF9681
+736,PHBXS,MUC,Münich International,München,Duitsland,SK6673
+737,PHBXS,MUC,Münich International,München,Duitsland,CZ1343
+738,PHBXS,MUC,Münich International,München,Duitsland,DL9632
+739,PHBXS,MUC,Münich International,München,Duitsland,KL1848
+740,PHBXS,MUC,Münich International,München,Duitsland,AM6548
+741,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,KL1916
+742,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,AM6446
+743,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,CZ1350
+744,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,DL9279
+745,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,G35579
+746,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,KQ1952
+747,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,MF9723
+748,PHEZE,ZRH,Zurich Airport,Zurich,Zwitserland,SK6627
+749,PHNXK,TRD,Vaernes AB,Trondheim,Noorwegen,KL1150
+750,PHNXK,TRD,Vaernes AB,Trondheim,Noorwegen,AF8328
+751,PHNXK,TRD,Vaernes AB,Trondheim,Noorwegen,AZ3786
+752,PHNXK,TRD,Vaernes AB,Trondheim,Noorwegen,DL9251
+753,PHNXK,TRD,Vaernes AB,Trondheim,Noorwegen,G35696
+754,PHNXK,TRD,Vaernes AB,Trondheim,Noorwegen,KQ1172
+755,GEZAN,LTN,Luton,Londen,Verenigd Koninkrijk,EZY2511
+756,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,AZ3773
+757,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,DL9257
+758,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,GA9775
+759,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,KQ1166
+760,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,MF9627
+761,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,MH5633
+762,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,SV6335
+763,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,UX3794
+764,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,KL1248
+765,PHBXC,HEL,Helsinki-Vantaa,Helsinki,Finland,AF3248
+766,PHNXS,OPO,Francisco Sa Carneiro,Porto,Portugal,KL1571
+767,PHNXS,OPO,Francisco Sa Carneiro,Porto,Portugal,DL9398
+768,PHNXS,OPO,Francisco Sa Carneiro,Porto,Portugal,G35553
+769,PHNXS,OPO,Francisco Sa Carneiro,Porto,Portugal,SK6754
+770,PHEZG,ORK,Cork International,Cork,Ierland,KL1126
+771,PHEZG,ORK,Cork International,Cork,Ierland,DL9671
+772,FHBXF,LYS,Saint-Exupéry,Lyon,Frankrijk,KL2093
+773,FHBXF,LYS,Saint-Exupéry,Lyon,Frankrijk,AF1794
+774,FHBXF,LYS,Saint-Exupéry,Lyon,Frankrijk,DL8415
+775,,ORK,Cork International,Cork,Ierland,EI840
+776,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,DL0047
+777,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,AF5596
+778,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,KL6020
+779,N426DZ,JFK,John F Kennedy Intl,New York,Verenigde Staten,VS3941
+780,PHBXH,LIN,Linate,Milaan,Italië,KL1613
+781,PHBXH,LIN,Linate,Milaan,Italië,DL9622
+782,PHBXH,LIN,Linate,Milaan,Italië,MF9674
+783,FHZUT,CDG,Charles de Gaulle,Parijs,Frankrijk,AF1437
+784,FHZUT,CDG,Charles de Gaulle,Parijs,Frankrijk,AM6189
+785,FHZUT,CDG,Charles de Gaulle,Parijs,Frankrijk,DL8727
+786,FHZUT,CDG,Charles de Gaulle,Parijs,Frankrijk,KL2252
+787,FHZUT,CDG,Charles de Gaulle,Parijs,Frankrijk,MU1884
+788,EIDVE,DUB,Dublin International,Dublin,Ierland,EI602
+789,PHBGG,LHR,Heathrow,Londen,Verenigd Koninkrijk,KL1000
+790,PHBGG,LHR,Heathrow,Londen,Verenigd Koninkrijk,CI9362
+791,PHBGG,LHR,Heathrow,Londen,Verenigd Koninkrijk,CZ7660
+792,PHBGG,LHR,Heathrow,Londen,Verenigd Koninkrijk,G35589
+793,PHBGG,LHR,Heathrow,Londen,Verenigd Koninkrijk,MF9635
+794,PHBGG,LHR,Heathrow,Londen,Verenigd Koninkrijk,VS7046
+795,PHBGG,LHR,Heathrow,Londen,Verenigd Koninkrijk,DL9577
+796,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,KL1900
+797,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,AM6262
+798,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,CI8570
+799,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,CZ7691
+800,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,DL9269
+801,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,GA9535
+802,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,KQ1838
+803,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,MF9715
+804,PHBXI,VIE,Schwechat Intl,Wenen,Oostenrijk,SK6771
+805,B6093,CTU,Chengdu Shuangliu,Chengdu,China,CA3159
+806,PHYHB,OPO,Francisco Sa Carneiro,Porto,Portugal,HV6001
+807,PHYHB,OPO,Francisco Sa Carneiro,Porto,Portugal,KL2607
+808,PHBXU,GVA,Geneva International,Genève,Zwitserland,G35602
+809,PHBXU,GVA,Geneva International,Genève,Zwitserland,KQ1924
+810,PHBXU,GVA,Geneva International,Genève,Zwitserland,MF9615
+811,PHBXU,GVA,Geneva International,Genève,Zwitserland,SK6663
+812,PHBXU,GVA,Geneva International,Genève,Zwitserland,KL1928
+813,PHBXU,GVA,Geneva International,Genève,Zwitserland,AM6647
+814,PHBXU,GVA,Geneva International,Genève,Zwitserland,CZ1358
+815,PHBXU,GVA,Geneva International,Genève,Zwitserland,DL9528
+816,PHEXX,BHD,George Best City Apt,Belfast,Verenigd Koninkrijk,KL0946
+817,PHEXX,BHD,George Best City Apt,Belfast,Verenigd Koninkrijk,DL9633
+818,PHEXX,BHD,George Best City Apt,Belfast,Verenigd Koninkrijk,VS6927
+819,PHEZB,BIO,Bilbao Airport,Bilbao,Spanje,DL9445
+820,PHEZB,BIO,Bilbao Airport,Bilbao,Spanje,G35698
+821,PHEZB,BIO,Bilbao Airport,Bilbao,Spanje,KQ1684
+822,PHEZB,BIO,Bilbao Airport,Bilbao,Spanje,SK6801
+823,PHEZB,BIO,Bilbao Airport,Bilbao,Spanje,KL1524
+824,HBJDI,ZRH,Zurich Airport,Zurich,Zwitserland,LX724
+825,YLABT,RIX,Riga,Riga,Letland,BT617
+826,LZPAR,SOF,Sofia,Sofia,Bulgarije,FB461
+827,PHNXI,FLR,Peretola,Florence,Italië,KL1650
+828,PHNXI,FLR,Peretola,Florence,Italië,DL9512
+829,PHNXI,FLR,Peretola,Florence,Italië,G35577
+830,PHNXI,FLR,Peretola,Florence,Italië,KQ1638
+831,OELSI,MXP,Malpensa,Milaan,Italië,EJU3851
+832,PHEZO,BRU,Brussels,Brussel,België,KL1702
+833,PHEZO,BRU,Brussels,Brussel,België,AM6374
+834,PHEZO,BRU,Brussels,Brussel,België,DL9464
+835,PHEZO,BRU,Brussels,Brussel,België,GA9243
+836,PHEZO,BRU,Brussels,Brussel,België,KQ1722
+837,PHEZO,BRU,Brussels,Brussel,België,MF9354
+838,PHEZO,BRU,Brussels,Brussel,België,MH5658
+839,PHEZO,BRU,Brussels,Brussel,België,MU1834
+840,GCMPI,NWI,Norwich International,Norwich,Verenigd Koninkrijk,KL1055
+841,GCMPI,NWI,Norwich International,Norwich,Verenigd Koninkrijk,DL9387
+842,GCMPI,NWI,Norwich International,Norwich,Verenigd Koninkrijk,VS6921
+843,PHTFK,PUJ,Punta Cana International,Punta Cana,Dominicaanse Republiek,OR757
+844,OELSI,GLA,Glasgow International,Glasgow,Verenigd Koninkrijk,EJU7834
+845,N412DX,SEA,Seattle-Tacoma Intl,Seattle,Verenigde Staten,DL0142
+846,N412DX,SEA,Seattle-Tacoma Intl,Seattle,Verenigde Staten,AF5597
+847,N412DX,SEA,Seattle-Tacoma Intl,Seattle,Verenigde Staten,KL6032
+848,N412DX,SEA,Seattle-Tacoma Intl,Seattle,Verenigde Staten,VS3936
+849,PHBGB,LIS,Lisbon Airport,Lissabon,Portugal,KL1578
+850,PHBGB,LIS,Lisbon Airport,Lissabon,Portugal,AM6404
+851,PHBGB,LIS,Lisbon Airport,Lissabon,Portugal,DL9596
+852,PHBGB,LIS,Lisbon Airport,Lissabon,Portugal,G35563
+853,PHBGB,LIS,Lisbon Airport,Lissabon,Portugal,KQ1694
+854,PHBGB,LIS,Lisbon Airport,Lissabon,Portugal,RO9313
+855,PHBKK,SFO,San Francisco International,San Francisco,Verenigde Staten,KL0606
+856,PHBKK,SFO,San Francisco International,San Francisco,Verenigde Staten,AF8403
+857,PHBKK,SFO,San Francisco International,San Francisco,Verenigde Staten,DL9647
+858,PHBKK,SFO,San Francisco International,San Francisco,Verenigde Staten,VS7144
+859,PHBQM,LAX,Los Angeles International,Los Angeles,Verenigde Staten,KL0602
+860,PHBQM,LAX,Los Angeles International,Los Angeles,Verenigde Staten,AF8250
+861,PHBQM,LAX,Los Angeles International,Los Angeles,Verenigde Staten,DL9468
+862,PHBQM,LAX,Los Angeles International,Los Angeles,Verenigde Staten,VS7134
+863,,XCR,,,,KL9885
+864,PHEZP,HAJ,Hannover Airport,Hannover,Duitsland,KL1787
+865,PHEZP,HAJ,Hannover Airport,Hannover,Duitsland,CZ7679
+866,PHEZP,HAJ,Hannover Airport,Hannover,Duitsland,DL9325
+867,PHEZP,HAJ,Hannover Airport,Hannover,Duitsland,MU1589
+868,PHEZP,HAJ,Hannover Airport,Hannover,Duitsland,SK6700
+869,PHHXB,SSH,Sharm-el-Sheikh International,Sharm-el-Sheikh,Egypte,HV5335
+870,PHBVI,CPT,Cape Town,Kaapstad,Zuid-Afrika,KL0597
+871,PHBVI,CPT,Cape Town,Kaapstad,Zuid-Afrika,AF8367
+872,PHBVI,CPT,Cape Town,Kaapstad,Zuid-Afrika,DL9599
+873,OELZB,VIE,Schwechat Intl,Wenen,Oostenrijk,OS371
+874,GTNEC,LHR,Heathrow,Londen,Verenigd Koninkrijk,BA428
+875,YLCSB,TLL,Lennart Meri Tallinn,Tallinn,Estland,BT857
+876,IADJV,MUC,Münich International,München,Duitsland,EN8381
+877,PHEZX,BIO,Bilbao Airport,Bilbao,Spanje,KL1525
+878,PHEZX,BIO,Bilbao Airport,Bilbao,Spanje,DL9417
+879,PHEZX,BIO,Bilbao Airport,Bilbao,Spanje,G35506
+880,PHEZX,BIO,Bilbao Airport,Bilbao,Spanje,KQ1687
+881,PHEZX,BIO,Bilbao Airport,Bilbao,Spanje,SK6796
+882,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,DL9281
+883,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,KQ1533
+884,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,VS7088
+885,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,KL0963
+886,GCMLI,MME,Tees Valley,Darlington,Verenigd Koninkrijk,AF8397
+887,N57016,EWR,Newark Liberty Intl,New York,Verenigde Staten,UA071
+888,N816NW,SLC,Salt Lake City International,Salt Lake City,Verenigde Staten,DL0057
+889,N816NW,SLC,Salt Lake City International,Salt Lake City,Verenigde Staten,AF5594
+890,N816NW,SLC,Salt Lake City International,Salt Lake City,Verenigde Staten,KL6027
+891,N816NW,SLC,Salt Lake City International,Salt Lake City,Verenigde Staten,VS3942
+892,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,KL1798
+893,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,CZ7791
+894,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,DL9496
+895,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,GA9377
+896,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,KQ1856
+897,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,MF9386
+898,PHEXZ,DUS,Duesseldorf International,Düsseldorf,Duitsland,MU1584
+899,PHBCE,PRG,Ruzyne,Praag,Tsjechië,KL1353
+900,PHBCE,PRG,Ruzyne,Praag,Tsjechië,CI9491
+901,PHBCE,PRG,Ruzyne,Praag,Tsjechië,DL9287
+902,PHBCE,PRG,Ruzyne,Praag,Tsjechië,GA9476
+903,PHBCE,PRG,Ruzyne,Praag,Tsjechië,KQ1355
+904,PHNXO,KRK,John Paul II - Balice,Krakau,Polen,DL9337
+905,PHNXO,KRK,John Paul II - Balice,Krakau,Polen,KL1323
+906,PHNXO,KRK,John Paul II - Balice,Krakau,Polen,AF3139
+907,PHEXI,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,KL1019
+908,PHEXI,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,AF8381
+909,PHEXI,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,DL9413
+910,PHEXI,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,KQ1541
+911,PHEXI,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,MU1633
+912,PHEXI,LBA,Leeds/Bradford Airport,Leeds,Verenigd Koninkrijk,VS6999
+913,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,KL0971
+914,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,AF3203
+915,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,DL9332
+916,GCMWI,HUY,Humberside,Humberside,Verenigd Koninkrijk,VS7008
+917,N670UA,ORD,O'Hare International,Chicago,Verenigde Staten,UA909
+918,YLABK,VNO,Vilnius,Vilnius,Litouwen,BT961
+919,PHBGF,MRS,Provence,Marseille,Frankrijk,KL1465
+920,PHBGF,MRS,Provence,Marseille,Frankrijk,AF3181
+921,PHBGF,MRS,Provence,Marseille,Frankrijk,DL9304
+922,PHBGF,MRS,Provence,Marseille,Frankrijk,SK6748
+923,PHEXU,LUX,Luxembourg,Luxemburg,Luxemburg,KL1709
+924,PHEXU,LUX,Luxembourg,Luxemburg,Luxemburg,DL9353
+925,PHEXU,LUX,Luxembourg,Luxemburg,Luxemburg,KQ1741
+926,PHBCG,OTP,Henri Coandă,Boekarest,Roemenië,RO9364
+927,PHBCG,OTP,Henri Coandă,Boekarest,Roemenië,SK6806
+928,PHBCG,OTP,Henri Coandă,Boekarest,Roemenië,KL1373
+929,PHBCG,OTP,Henri Coandă,Boekarest,Roemenië,DL9682
+930,PHEZE,BRU,Brussels,Brussel,België,KL1703
+931,PHEZE,BRU,Brussels,Brussel,België,DL9607
+932,PHEZE,BRU,Brussels,Brussel,België,GA9220
+933,PHEZE,BRU,Brussels,Brussel,België,KQ1723
+934,PHEZE,BRU,Brussels,Brussel,België,MF9355
+935,PHEZE,BRU,Brussels,Brussel,België,MH5683
+936,PHEZF,BRE,Bremen,Bremen,Duitsland,KL1761
+937,PHEZF,BRE,Bremen,Bremen,Duitsland,DL9202
+938,PHEZF,BRE,Bremen,Bremen,Duitsland,SK6724
+939,PHNXR,HAM,Hamburg Airport,Hamburg,Duitsland,KL1753
+940,PHNXR,HAM,Hamburg Airport,Hamburg,Duitsland,KQ1781
+941,PHNXR,HAM,Hamburg Airport,Hamburg,Duitsland,MU1607
+942,PHNXR,HAM,Hamburg Airport,Hamburg,Duitsland,KL1753
+943,PHNXR,HAM,Hamburg Airport,Hamburg,Duitsland,CZ7666
+944,PHEZG,BSL,EuroAirport Swiss,Bazel,Zwitserland,KL1943
+945,PHEZG,BSL,EuroAirport Swiss,Bazel,Zwitserland,AF3121
+946,PHEZG,BSL,EuroAirport Swiss,Bazel,Zwitserland,DL9355
+947,PHEZG,BSL,EuroAirport Swiss,Bazel,Zwitserland,MU1789
+948,PHEZG,BSL,EuroAirport Swiss,Bazel,Zwitserland,SK6778
+949,PHEZC,LCY,London City Airport,Londen,Verenigd Koninkrijk,KL0983
+950,PHEZC,LCY,London City Airport,Londen,Verenigd Koninkrijk,DL9345
+951,PHEZC,LCY,London City Airport,Londen,Verenigd Koninkrijk,VS7036
+952,PHAXB,ZRH,Zurich Airport,Zurich,Zwitserland,KL1919
+953,PHAXB,ZRH,Zurich Airport,Zurich,Zwitserland,CZ7707
+954,PHAXB,ZRH,Zurich Airport,Zurich,Zwitserland,DL9427
+955,PHAXB,ZRH,Zurich Airport,Zurich,Zwitserland,KQ1957
+956,PHAXB,ZRH,Zurich Airport,Zurich,Zwitserland,MF9726
+957,PHAXB,ZRH,Zurich Airport,Zurich,Zwitserland,MH5691
+958,PHAXB,ZRH,Zurich Airport,Zurich,Zwitserland,SK6670
+959,GLCYV,LCY,London City Airport,Londen,Verenigd Koninkrijk,BA8497
+960,GEZUF,MAN,Manchester Airport,Manchester,Verenigd Koninkrijk,EZY2161
+961,FHBXF,LYS,Saint-Exupéry,Lyon,Frankrijk,AF1795
+962,FHBXF,LYS,Saint-Exupéry,Lyon,Frankrijk,DL8416
+963,FHBXF,LYS,Saint-Exupéry,Lyon,Frankrijk,KL2102
+964,PHBXB,MUC,Münich International,München,Duitsland,KL1851
+965,PHBXB,MUC,Münich International,München,Duitsland,CZ7694
+966,PHBXB,MUC,Münich International,München,Duitsland,DL9370
+967,PHBXB,MUC,Münich International,München,Duitsland,GA9228
+968,PHBXB,MUC,Münich International,München,Duitsland,KQ1791
+969,PHBXB,MUC,Münich International,München,Duitsland,MF9684
+970,PHBXB,MUC,Münich International,München,Duitsland,MU1595
+971,PHBXB,MUC,Münich International,München,Duitsland,SK6660
+972,PHEXT,TRN,Caselle,Turijn,Italië,KL1639
+973,PHEXT,TRN,Caselle,Turijn,Italië,DL9555
+974,PHEXT,TRN,Caselle,Turijn,Italië,KQ1555
+975,PHEXT,TRN,Caselle,Turijn,Italië,MU1829
+976,PHEXT,TRN,Caselle,Turijn,Italië,SK6818
+977,PHNXU,BEG,Belgrado Nikola Tesla,Belgrado,Servië,KL1983
+978,PHNXU,BEG,Belgrado Nikola Tesla,Belgrado,Servië,DL9189
+979,PHNXU,BEG,Belgrado Nikola Tesla,Belgrado,Servië,JU7637
+980,PHNXU,BEG,Belgrado Nikola Tesla,Belgrado,Servië,SK6802
+981,GEZAN,LTN,Luton,Londen,Verenigd Koninkrijk,EZY2512
+982,PHBXG,GVA,Geneva International,Genève,Zwitserland,DL9617
+983,PHBXG,GVA,Geneva International,Genève,Zwitserland,MF9618
+984,PHBXG,GVA,Geneva International,Genève,Zwitserland,MH5687
+985,PHBXG,GVA,Geneva International,Genève,Zwitserland,SK6650
+986,PHBXG,GVA,Geneva International,Genève,Zwitserland,KL1931
+987,PHBXG,GVA,Geneva International,Genève,Zwitserland,CZ7714
+988,9HNEB,MLA,Luqa International,Malta,Malta,KM394
+989,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,MU1679
+990,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,UU8340
+991,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,CI9292
+992,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,DL8529
+993,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,GA9549
+994,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,KL2006
+995,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,KQ3013
+996,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,MK9392
+997,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,AF1340
+998,FHZUG,CDG,Charles de Gaulle,Parijs,Frankrijk,AM5832
+999,PHEXG,CWL,Cardiff,Cardiff,Verenigd Koninkrijk,EY7325
