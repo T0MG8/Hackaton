@@ -8,26 +8,35 @@ from io import StringIO
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 from branca.colormap import linear
+from streamlit_folium import st_folium
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Inladen bestanden en HTML
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-df = pd.read_csv("26-03-2025.csv")
+@st.cache_data
+def load_data_api():
+    return pd.read_csv("26-03-2025.csv")
+df = load_data_api()
 
-url = "https://nl.wikipedia.org/wiki/Vliegvelden_gesorteerd_naar_IATA-code"
+@st.cache_data
+def load_data_loc():
+    return pd.read_csv("flights_today_master.csv")
+livevlucht = load_data_loc()
 
-# Set the headers with a User-Agent
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+@st.cache_data
+def load_airport_data():
+    url = "https://nl.wikipedia.org/wiki/Vliegvelden_gesorteerd_naar_IATA-code"
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+    
+    response = requests.get(url, headers=headers)
+    html_content = StringIO(response.text)
+    
+    tables = pd.read_html(html_content)
+    return tables[1]  # Pas de index aan als nodig
 
-# Fetch the HTML content with requests
-response = requests.get(url, headers=headers)
-
-# Use StringIO to convert the HTML content to a file-like object
-html_content = StringIO(response.text)
-
-# Use pandas to read the table from the HTML content
-tables = pd.read_html(html_content)
-
-# Select the table you want (in your case, the correct one based on the structure of the page)
-vliegvelden = tables[1]  # Adjust the index based on the correct table
+# Roep de functie aan en cache het resultaat
+vliegvelden = load_airport_data()
 
 # Zet de lijstkolom om naar een stringkolom door het eerste element te selecteren:
 df['route.destinations'] = df['route.destinations'].apply(lambda x: x[0] if isinstance(x, list) and len(x) > 0 else None)
@@ -49,8 +58,6 @@ df = df[['aircraftRegistration', 'route.destinations', 'Luchthaven', 'Stad', 'La
 stedenlijst= ['Parijs', 'Brussel', 'Antwerpen', 'Praag', 'Londen', 'Hamburg', 'Frankfurt', 'Wenen', 'Luxemburg', 'Milaan', 'Venetië', 'Berlijn', 'München', 'Luxemburg-stad', 'Zurich', 'Marseille', 'Nice', 'Kopenhagen', 'Geneve', 'Luxemburg-Stad']
 StedenHackaton= df['Stad'].isin(stedenlijst)
 filtered_df = df.loc[StedenHackaton,'Stad']
-
-livevlucht = pd.read_csv("flights_today_master.csv")
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -79,8 +86,6 @@ if pagina == 'Inleiding':
 
     # Weergeven in Streamlit
     st.plotly_chart(fig)
-
-
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -227,36 +232,64 @@ if pagina == 'Inleiding':
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
 elif pagina == 'Vluchten':
-# De lijst met vluchtcodes per stad
-    londen = ['BAW441','KLM1016','KLM1016','BAW444','BAW438','BAW428']
-    parijs = ['TAY9MS','AFR1240','HOP1740A','FR1140A','FR1640','HOP1740']
-    hamburg = ['KLM1758','KLM1754','KLM1750','KLM1752']
-    berlijn = ['KLM1784','NJE622F','KLM1782','KLM1770','EZY5281','EZY5285']
-    munchen = ['DLH2304', 'KLM1854']
-    frankfurt = ['KLM1818', 'DLH992']
-    brussel = ['KLM1706', 'KLM1700', 'KLM1702']
-    luxemburg = ['GER1714', 'KLM1708']
-    nice = ['KLM1476', 'KLM1472', 'TRA5588', 'KLM1478']
-    marseille = ['KLM1470', 'KLM1464', 'KLM1466']
-    venetie = ['EZY7816', 'KLM1628', 'KLM1634']
-    milaan = ['KLM1614', 'EZY7830', 'ITY112', 'KLM1612', 'EZY7830']
-    geneve = ['KLM1938', 'KLM1928', 'KLM1932', 'EZY1517', 'KLM1936']
-    zurich = ['SWR728', 'KLM1920', 'OAW734', 'KLM1926']
-    wenen = ['AUA371', 'KLM1900','AUA377','AUA375','AUA371']
-    praag = ['KLM1354', 'EZY7928', 'KLM1360','KLM1358','EZY7928']
-    kopenhagen = ['SAS2551', 'SAS549', 'EZY7938', 'KLM1266', 'KLM1270']
+    @st.cache_data
+    def load_flight_data():
+        return {
+        "londen": ['BAW441', 'KLM1016', 'KLM1016', 'BAW444', 'BAW438', 'BAW428'],
+        "parijs": ['TAY9MS', 'AFR1240', 'HOP1740A', 'FR1140A', 'FR1640', 'HOP1740'],
+        "hamburg": ['KLM1758', 'KLM1754', 'KLM1750', 'KLM1752'],
+        "berlijn": ['KLM1784', 'NJE622F', 'KLM1782', 'KLM1770', 'EZY5281', 'EZY5285'],
+        "munchen": ['DLH2304', 'KLM1854'],
+        "frankfurt": ['KLM1818', 'DLH992'],
+        "brussel": ['KLM1706', 'KLM1700', 'KLM1702'],
+        "luxemburg": ['GER1714', 'KLM1708'],
+        "nice": ['KLM1476', 'KLM1472', 'TRA5588', 'KLM1478'],
+        "marseille": ['KLM1470', 'KLM1464', 'KLM1466'],
+        "venetie": ['EZY7816', 'KLM1628', 'KLM1634'],
+        "milaan": ['KLM1614', 'EZY7830', 'ITY112', 'KLM1612', 'EZY7830'],
+        "geneve": ['KLM1938', 'KLM1928', 'KLM1932', 'EZY1517', 'KLM1936'],
+        "zurich": ['SWR728', 'KLM1920', 'OAW734', 'KLM1926'],
+        "wenen": ['AUA371', 'KLM1900', 'AUA377', 'AUA375', 'AUA371'],
+        "praag": ['KLM1354', 'EZY7928', 'KLM1360', 'KLM1358', 'EZY7928'],
+        "kopenhagen": ['SAS2551', 'SAS549', 'EZY7938', 'KLM1266', 'KLM1270'],
+    }
 
+# Roep de vluchtcode-data op en koppel per stad een variabele
+    vluchten = load_flight_data()
+    londen     = vluchten["londen"]
+    parijs     = vluchten["parijs"]
+    hamburg    = vluchten["hamburg"]
+    berlijn    = vluchten["berlijn"]
+    munchen    = vluchten["munchen"]
+    frankfurt  = vluchten["frankfurt"]
+    brussel    = vluchten["brussel"]
+    luxemburg  = vluchten["luxemburg"]
+    nice       = vluchten["nice"]
+    marseille  = vluchten["marseille"]
+    venetie    = vluchten["venetie"]
+    milaan     = vluchten["milaan"]
+    geneve     = vluchten["geneve"]
+    zurich     = vluchten["zurich"]
+    wenen     = vluchten["wenen"]
+    praag      = vluchten["praag"]
+    kopenhagen = vluchten["kopenhagen"]
 
-# Definities van de vluchtcodes
-    noord = ['BAW441', 'BAW428', 'TAY9MS', 'AFR1240', 'KLM1750', 'EZY5281', 'KLM1770', 'KLM1708', 'KLM1472', 'KLM1464', 'EZY7830', 'KLM1612', 'KLM1928', 'KLM1900', 'KLM1266', 'KLM1702', 'KLM1700', 'AUA371']
+    # --- Definities voor regio's ---
+    noord = ['BAW441', 'BAW428', 'TAY9MS', 'AFR1240', 'KLM1750', 'EZY5281', 'KLM1770',
+             'KLM1708', 'KLM1472', 'KLM1464', 'EZY7830', 'KLM1612', 'KLM1928', 'KLM1900',
+             'KLM1266', 'KLM1702', 'KLM1700', 'AUA371']
     oost = ['SAS2551', 'KLM1752']
-    zuid = ['KLM1016', 'KLM1016', 'BAW444', 'BAW438', 'HOP1740A', 'FR1140A', 'FR1640', 'HOP1740', 'KLM1758', 'KLM1754', 'KLM1784', 'NJE622F', 'KLM1782', 'EZY5285', 'DLH2304', 'KLM1854', 'KLM1818', 'DLH992', 'KLM1706', 'GER1714', 'KLM1476', 'TRA5588', 'KLM1478', 'KLM1470', 'KLM1466', 'EZY7816', 'KLM1628', 'KLM1634', 'KLM1614', 'ITY112', 'KLM1938', 'KLM1932', 'EZY1517', 'KLM1936', 'SWR728', 'KLM1920', 'OAW734', 'KLM1926', 'AUA377', 'AUA375', 'KLM1354', 'EZY7928', 'KLM1360', 'KLM1358', 'SAS549', 'EZY7938', 'KLM1270']
-    alle = noord + oost + zuid 
+    zuid = ['KLM1016', 'KLM1016', 'BAW444', 'BAW438', 'HOP1740A', 'FR1140A', 'FR1640',
+            'HOP1740', 'KLM1758', 'KLM1754', 'KLM1784', 'NJE622F', 'KLM1782', 'EZY5285',
+            'DLH2304', 'KLM1854', 'KLM1818', 'DLH992', 'KLM1706', 'GER1714', 'KLM1476',
+            'TRA5588', 'KLM1478', 'KLM1470', 'KLM1466', 'EZY7816', 'KLM1628', 'KLM1634',
+            'KLM1614', 'ITY112', 'KLM1938', 'KLM1932', 'EZY1517', 'KLM1936', 'SWR728',
+            'KLM1920', 'OAW734', 'KLM1926', 'AUA377', 'AUA375', 'KLM1354', 'EZY7928',
+            'KLM1360', 'KLM1358', 'SAS549', 'EZY7938', 'KLM1270']
+    alle = noord + oost + zuid
 
-# Streamlit dropdown
+    # Streamlit dropdown voor regio-keuze
     keuze = st.selectbox("Kies een regio", ["Alle vluchten", "Noord", "Oost", "Zuid"])
-
-# Bij de keuze de bijbehorende vluchtcodes tonen
     if keuze == "Alle vluchten":
         gewenste_vluchtcodes = alle
     elif keuze == "Noord":
@@ -266,21 +299,20 @@ elif pagina == 'Vluchten':
     else:
         gewenste_vluchtcodes = zuid
 
+    # Maak een DataFrame voor een overzicht (optioneel)
     data = {
-    'Regio': ['Noord', 'Oost', 'Zuid', 'Totaal'],
-    'Aantal Vluchten': [len(noord), len(oost), len(zuid), len(alle)]
-}
-
-# Creëer een DataFrame
+        'Regio': ['Noord', 'Oost', 'Zuid', 'Totaal'],
+        'Aantal Vluchten': [len(noord), len(oost), len(zuid), len(alle)]
+    }
     aankomst = pd.DataFrame(data)
 
-    # Definieer een dictionary voor kleuren per stad
+    # Definieer kleuren per stad
     stad_kleuren = {
         'Londen': 'blue',
         'Parijs': 'red',
         'Hamburg': 'green',
         'Berlijn': 'purple',
-        'München': 'orange',
+            'München': 'orange',
         'Frankfurt': 'pink',
         'Brussel': 'yellow',
         'Luxemburg': 'brown',
@@ -295,21 +327,18 @@ elif pagina == 'Vluchten':
         'Kopenhagen': 'gold'
     }
 
-    # Filter de unieke vluchtcodes die overeenkomen met de lijst van gewenste vluchtcodes
+# Filter de unieke vluchtcodes uit de live data op basis van de gekozen codes
     unieke_vluchtcodes = livevlucht[livevlucht['FlightNumber'].isin(gewenste_vluchtcodes)]['FlightNumber'].unique()
 
-    # Maak een folium-kaart
+# Maak de folium-kaart
     m = folium.Map(location=[52.308916, 4.769637], zoom_start=9)
 
-    # Itereer over elke unieke vluchtcode
+# Voor elke vluchtcode: bepaal de stad en voeg de lijn toe aan de kaart
     for vluchtcode in unieke_vluchtcodes:
-        # Filter de data voor de specifieke vlucht
         vlucht_data = livevlucht[livevlucht['FlightNumber'] == vluchtcode]
-
-        # Haal de coördinaten op
         coordinates = vlucht_data[['Latitude', 'Longitude']].values.tolist()
 
-        # Zoek de stad op basis van de vluchtcode
+        # Bepaal de stad op basis van in welke lijst de vluchtcode voorkomt
         if vluchtcode in londen:
             stad = 'Londen'
         elif vluchtcode in parijs:
@@ -340,27 +369,24 @@ elif pagina == 'Vluchten':
             stad = 'Zürich'
         elif vluchtcode in wenen:
             stad = 'Wenen'
-        elif vluchtcode in praag:
+        elif vluchtcode in praag:  # Hier is de variabele 'praag' beschikbaar als praal
             stad = 'Praag'
         elif vluchtcode in kopenhagen:
             stad = 'Kopenhagen'
+        else:
+            stad = 'Onbekend'
 
-        # Krijg de kleur voor deze stad
-        kleur = stad_kleuren.get(stad, 'gray')  # Gebruik 'gray' als fallback kleur
+        kleur = stad_kleuren.get(stad, 'gray')
 
-        # Voeg een lijn toe voor het vluchtpad met een pop-up
         folium.PolyLine(
-            coordinates, 
-            weight=3, 
-            opacity=1, 
-            color=kleur,  # Gebruik de kleur per stad
-            popup=f"City: {stad.capitalize()}"  # Pop-up met de vluchtcode
+            coordinates,
+            weight=3,
+            opacity=1,
+            color=kleur,
+            popup=f"City: {stad.capitalize()}"
         ).add_to(m)
 
-    # Zet de folium-kaart om naar een HTML bestand en toon het in Streamlit
-    from streamlit_folium import st_folium
-
-    # Toon de kaart in de Streamlit-app
+    # Toon de kaart in Streamlit
     st_folium(m, width=700, height=500)
 
 
@@ -390,38 +416,9 @@ elif pagina == 'Vluchten':
 
     st.dataframe(aankomst)
 
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-# Veronderstel dat livevlucht al gedefinieerd is
-
-    gewenste_vluchtcodes = zuid
-    noord = ['BAW441', 'BAW428', 'TAY9MS', 'AFR1240', 'KLM1750', 'EZY5281', 'KLM1770', 'KLM1708', 'KLM1472', 'KLM1464', 'EZY7830', 'KLM1612', 'KLM1928', 'KLM1900', 'KLM1266', 'KLM1702', 'KLM1700', 'AUA371','KLM1628']
-    oost = ['SAS2551', 'KLM1752', ]
-    zuid = ['KLM1016', 'KLM1016', 'BAW444', 'BAW438', 'HOP1740A', 'FR1140A', 'FR1640', 'HOP1740', 'KLM1758', 'KLM1754', 'KLM1784', 'NJE622F', 'KLM1782', 'EZY5285', 'DLH2304', 'KLM1854', 'KLM1818', 'DLH992', 'KLM1706', 'GER1714', 'KLM1476', 'TRA5588', 'KLM1478', 'KLM1470', 'KLM1466', 'EZY7816',  'KLM1634', 'KLM1614', 'ITY112', 'KLM1938', 'KLM1932', 'EZY1517', 'KLM1936', 'SWR728', 'KLM1920', 'OAW734', 'KLM1926', 'AUA377', 'AUA375',  'KLM1354', 'EZY7928', 'KLM1360', 'KLM1358', 'SAS549', 'EZY7938', 'KLM1270']
-    alle = ['BAW441', 'BAW428', 'TAY9MS', 'AFR1240', 'KLM1750', 'EZY5281', 'KLM1770', 'KLM1708', 'KLM1472', 'KLM1464', 'EZY7830', 'KLM1612', 'KLM1928', 'KLM1900', 'KLM1266', 'KLM1702', 'KLM1700', 'AUA371', 'SAS2551', 'KLM1752','KLM1016', 'KLM1016', 'BAW444', 'BAW438', 'HOP1740A', 'FR1140A', 'FR1640', 'HOP1740', 'KLM1758', 'KLM1754', 'KLM1784', 'NJE622F', 'KLM1782', 'EZY5285', 'DLH2304', 'KLM1854', 'KLM1818', 'DLH992', 'KLM1706', 'GER1714', 'KLM1476', 'TRA5588', 'KLM1478', 'KLM1470', 'KLM1466', 'EZY7816', 'KLM1628', 'KLM1634', 'KLM1614', 'ITY112', 'KLM1938', 'KLM1932', 'EZY1517', 'KLM1936', 'SWR728', 'KLM1920', 'OAW734', 'KLM1926', 'AUA377', 'AUA375',  'KLM1354', 'EZY7928', 'KLM1360', 'KLM1358', 'SAS549', 'EZY7938', 'KLM1270']
-
-
-    # Filter de dataframe op de gewenste vluchtcodes
-    filtered_livevlucht = livevlucht[livevlucht['FlightNumber'].isin(gewenste_vluchtcodes)]
-
-    filtered_livevlucht['ClimbRate'] = filtered_livevlucht['ClimbRate'].apply(lambda x: float(x.replace(',', '')) if isinstance(x, str) else x)
-
-    # Vervang NaN-waarden in de kolom 'ClimbRate' door 0
-    filtered_livevlucht['ClimbRate'] = filtered_livevlucht['ClimbRate'].fillna(0)
-
-    # Groepeer op FlightNumber en bereken de cumulatieve som per vluchtcode
-    filtered_livevlucht['cumsum_ClimbRate'] = filtered_livevlucht.groupby('FlightNumber')['ClimbRate'].cumsum()
-
-    # Normaliseer de cumulatieve som per vluchtcode
-    min_cumsum = filtered_livevlucht['cumsum_ClimbRate'].min()
-    max_cumsum = filtered_livevlucht['cumsum_ClimbRate'].max()
-
-    if min_cumsum != max_cumsum:
-        filtered_livevlucht['alt_norm'] = (filtered_livevlucht['cumsum_ClimbRate'] - min_cumsum) / (max_cumsum - min_cumsum)
-    else:
-        filtered_livevlucht['alt_norm'] = 0  # Als alle waardes gelijk zijn, kies een middenkleur
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # Definieer een kleurenschaal: rood (laag) → geel → blauw (hoog)
     colormap = linear.RdYlBu_11.scale(0, 0.7)
@@ -430,7 +427,7 @@ elif pagina == 'Vluchten':
     map_obj = folium.Map(location=[52.3053, 4.7458], zoom_start=10)
 
     # Voeg cirkels toe op basis van de cumulatieve som van ClimbRate per vluchtcode
-    for _, row in filtered_livevlucht.iterrows():
+    for _, row in livevlucht.iterrows():
         folium.CircleMarker(
                 location=[row['Latitude'], row['Longitude']],
             radius=5,  # Pas dit aan voor grotere/kleinere cirkels
@@ -446,7 +443,4 @@ elif pagina == 'Vluchten':
     map_obj.add_child(colormap)
 
     # Toon de kaart
-
-
-
     st_folium(map_obj, width=700, height=500)
