@@ -472,7 +472,6 @@ elif pagina == 'Vluchten':
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
     @st.cache_data
     def load_data_fil():
         return pd.read_csv("filtered_flight1.csv")
@@ -482,27 +481,64 @@ elif pagina == 'Vluchten':
     # Definieer een kleurenschaal: rood (laag) → geel → blauw (hoog)
     colormap = linear.RdYlBu_11.scale(0, 0.7)
 
-    # Maak de kaart
-    map_obj = folium.Map(location=[52.3053, 4.7458], zoom_start=10)
+    map_obj = folium.Map(location=[52.2553, 4.7458], zoom_start=10)
 
-    # Voeg cirkels toe op basis van de cumulatieve som van ClimbRate per vluchtcode
+# Voeg cirkels toe op basis van de cumulatieve som van ClimbRate per vluchtcode
     for _, row in filtered_livevlucht.iterrows():
         folium.CircleMarker(
-                location=[row['Latitude'], row['Longitude']],
-            radius=5,  # Pas dit aan voor grotere/kleinere cirkels
-            color=colormap(row['alt_norm']),
-            fill=True,
-    fill_color=colormap(row['alt_norm']),
-            fill_opacity=0.7,
-            popup=f"Vlucht: {row['FlightNumber']}<br>Cumulatieve Klimsnelheid: {row['cumsum_ClimbRate']} ft/min"
-        ).add_to(map_obj)
+                    location=[row['Latitude'], row['Longitude']],
+        radius=5,  # Pas dit aan voor grotere/kleinere cirkels
+        color=colormap(row['alt_norm']),
+        fill=True,
+        fill_color=colormap(row['alt_norm']),
+        fill_opacity=0.7,
+        popup=f"Vlucht: {row['FlightNumber']}<br>Cumulatieve Klimsnelheid: {row['cumsum_ClimbRate']} ft/min"
+    ).add_to(map_obj)
+        
+    schiphol_location = [52.3086, 4.7639]  # Coördinaten van Schiphol
+    folium.Marker(
+    location=schiphol_location,
+    popup="Schiphol",
+    icon=folium.Icon(color='blue')  # Blauwe marker
+).add_to(map_obj)
 
-    # Voeg de colormap-legend toe
+# Maak een specifieke marker in een aparte layer
+    marker_layer = folium.FeatureGroup(name="Specifieke Locaties", show=False).add_to(map_obj)
+
+# Voeg de extra markers toe
+    locations = [
+    (52.264898, 4.733947, "Specifieke Locatie 1"),
+    (52.271313, 4.769696, "Specifieke Locatie 2"),
+    (52.228793, 4.738717, "Specifieke Locatie 3"),
+    (52.264877, 4.774237, "Specifieke Locatie 4"),
+    (52.269098, 4.786799, "Specifieke Locatie 5"),
+    (52.236124, 4.747516, "Specifieke Locatie 6"),
+    (52.234545, 4.759145, "Specifieke Locatie 7")
+]
+
+# Voeg elke marker toe aan de marker_layer
+    for lat, lon, popup_text in locations:
+        folium.Marker(
+        location=[lat, lon],
+        popup=popup_text,
+        icon=folium.Icon(color='lightgreen')  # Pas de kleur van de marker aan
+    ).add_to(marker_layer)
+
+# Voeg de colormap-legend toe
     colormap.caption = "Cumulatieve Klimsnelheid (ClimbRate)"
     map_obj.add_child(colormap)
 
-    # Toon de kaart
+# Voeg de LayerControl toe
+    folium.LayerControl().add_to(map_obj)
+
+# Toon de kaart in Streamlit
     st_folium(map_obj, width=700, height=500)
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 elif pagina == 'Geluid':
     st.title("MOET NOG TEKST")
