@@ -14,15 +14,36 @@ from streamlit_folium import st_folium
 # Inladen bestanden en HTML
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+pd.set_option('display.max_columns', None)
+
+start_date = int(pd.to_datetime('2025-03-25').timestamp())
+end_date = int(pd.to_datetime('2025-03-30').timestamp())
+
+response = requests.get(f'https://sensornet.nl/dataserver3/event/collection/nina_events/stream?conditions%5B0%5D%5B%5D=time&conditions%5B0%5D%5B%5D=%3E%3D&conditions%5B0%5D%5B%5D={start_date}&conditions%5B1%5D%5B%5D=time&conditions%5B1%5D%5B%5D=%3C&conditions%5B1%5D%5B%5D={end_date}&conditions%5B2%5D%5B%5D=label&conditions%5B2%5D%5B%5D=in&conditions%5B2%5D%5B2%5D%5B%5D=21&conditions%5B2%5D%5B2%5D%5B%5D=32&conditions%5B2%5D%5B2%5D%5B%5D=33&conditions%5B2%5D%5B2%5D%5B%5D=34&args%5B%5D=aalsmeer&args%5B%5D=schiphol&fields%5B%5D=time&fields%5B%5D=location_short&fields%5B%5D=location_long&fields%5B%5D=duration&fields%5B%5D=SEL&fields%5B%5D=SELd&fields%5B%5D=SELe&fields%5B%5D=SELn&fields%5B%5D=SELden&fields%5B%5D=SEL_dB&fields%5B%5D=lasmax_dB&fields%5B%5D=callsign&fields%5B%5D=type&fields%5B%5D=altitude&fields%5B%5D=distance&fields%5B%5D=winddirection&fields%5B%5D=windspeed&fields%5B%5D=label&fields%5B%5D=hex_s&fields%5B%5D=registration&fields%5B%5D=icao_type&fields%5B%5D=serial&fields%5B%5D=operator&fields%5B%5D=tags')
+
+colnames = pd.DataFrame(response.json()['metadata'])
+data = pd.DataFrame(response.json()['rows'])
+data.columns = colnames.headers
+
+data['time'] = pd.to_datetime(data['time'], unit = 's')
+
+print(data['time'].min(),data['time'].max())
+
 @st.cache_data
 def load_data_api():
-    return pd.read_csv("26-03-2025.csv")
+    return pd.read_csv("27-03-2025.csv")
 df = load_data_api()
 
 @st.cache_data
 def load_data_loc():
-    return pd.read_csv("flights_today_master2.csv")
+    return pd.read_csv("flight.csv")
 livevlucht = load_data_loc()
+
+@st.cache_data
+def load_data2():
+    return pd.read_csv("Hackaton2.csv")
+df2 = load_data2()
+
 
 @st.cache_data
 def load_airport_data():
@@ -54,13 +75,11 @@ df['Luchthaven'] = df['route.destinations'].map(mapping)
 df['Stad'] = df['route.destinations'].map(mapping2)
 df['Land'] = df['route.destinations'].map(mapping3)
 
-df = df[['aircraftRegistration', 'route.destinations', 'Luchthaven', 'Stad', 'Land', 'flightName']]
-
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-pagina = st.sidebar.radio("Selecteer een pagina", ['Inleiding', 'Vluchten'])
+pagina = st.sidebar.radio("Selecteer een pagina", ['Inleiding', 'Onderbouwing', 'Vluchten', 'Geluid'])
 if pagina == 'Inleiding':
     st.title('Welke '"nutteloze"' vluchten kan Schiphol schrappen in Europa om het geluidsoverlast te verminderen rondom Schiphol.')
 
@@ -88,7 +107,7 @@ if pagina == 'Inleiding':
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+if pagina == 'Onderbouwing':
     # Titel van de app
     st.title("Interactieve Kaart met Steden en Spoorlijnen")
 
@@ -166,6 +185,8 @@ if pagina == 'Inleiding':
     stedenlijst= ['Parijs', 'Brussel', 'Antwerpen', 'Praag', 'Londen', 'Hamburg', 'Frankfurt', 'Wenen', 'Luxemburg', 'Milaan', 'Venetië', 'Berlijn', 'München', 'Luxemburg-stad', 'Zurich', 'Marseille', 'Nice', 'Kopenhagen', 'Geneve', 'Luxemburg-Stad']
     StedenHackaton= df['Stad'].isin(stedenlijst)
     filtered_df = df.loc[StedenHackaton,'Stad']
+
+
 
     # Maak histogram met Plotly
     fig8 = go.Figure()
@@ -278,34 +299,24 @@ elif pagina == 'Vluchten':
              'KLM1266', 'KLM1702', 'KLM1700', 'AUA371']
     oost = ['SAS2551', 'KLM1752']
     zuid = ['KLM1016', 'KLM1016', 'BAW444', 'BAW438', 'HOP1740A', 'FR1140A', 'FR1640',
-            'HOP1740', 'KLM1758', 'KLM1754', 'KLM1784', 'NJE622F', 'KLM1782', 'EZY5285',
-            'DLH2304', 'KLM1854', 'KLM1818', 'DLH992', 'KLM1706', 'GER1714', 'KLM1476',
+            'HOP1740', 'KLM1758', 'KLM1784', 'NJE622F', 'KLM1782', 'EZY5285',
+            'KLM1854',  'DLH992', 'KLM1706', 'GER1714', 'KLM1476',
             'TRA5588', 'KLM1478', 'KLM1470', 'KLM1466', 'EZY7816', 'KLM1628', 'KLM1634',
-            'KLM1614', 'ITY112', 'KLM1938', 'KLM1932', 'EZY1517', 'KLM1936', 'SWR728',
-            'KLM1920', 'OAW734', 'KLM1926', 'AUA377', 'AUA375', 'KLM1354', 'EZY7928',
-            'KLM1360', 'KLM1358', 'SAS549', 'EZY7938', 'KLM1270']
+            'ITY112', 'KLM1938',  'EZY1517', 'KLM1936', 'SWR728',
+             'OAW734', 'KLM1926', 'AUA377', 'AUA375', 'KLM1354', 'EZY7928',
+            'KLM1360', 'KLM1358', 'SAS549', 'EZY7938']
     alle = noord + oost + zuid
 
     # Maak een DataFrame voor een overzicht (optioneel)
-    data = {
-        'Regio': ['Noord', 'Oost', 'Zuid', 'Totaal'],
-        'Aantal Vluchten': [len(noord), len(oost), len(zuid), len(alle)]
+    aantal = {
+        'Regio': ['Noord', 'Oost', 'Zuid'],
+        'Aantal Vluchten': [18, 2, 47]
     }
-    aankomst = pd.DataFrame(data)
+    aankomst = pd.DataFrame(aantal)
     st.dataframe(aankomst)
 
     # Streamlit dropdown voor regio-keuze
-    keuze = st.selectbox("Kies een regio", ["Alle vluchten", "Noord", "Oost", "Zuid"])
-    if keuze == "Alle vluchten":
-        gewenste_vluchtcodes = alle
-    elif keuze == "Noord":
-        gewenste_vluchtcodes = noord
-    elif keuze == "Oost":
-        gewenste_vluchtcodes = oost
-    else:
-        gewenste_vluchtcodes = zuid
-
-
+    gewenste_vluchtcodes = alle
 
     # Definieer kleuren per stad
     stad_kleuren = {
@@ -377,7 +388,7 @@ elif pagina == 'Vluchten':
         else:
             stad = 'Onbekend'
 
-        kleur = stad_kleuren.get(stad, 'gray')
+        kleur = stad_kleuren.get(stad, None)
 
         folium.PolyLine(
             coordinates,
@@ -419,25 +430,11 @@ elif pagina == 'Vluchten':
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # Filter de dataframe op de gewenste vluchtcodes
-    filtered_livevlucht = livevlucht[livevlucht['FlightNumber'].isin(gewenste_vluchtcodes)]
 
-    filtered_livevlucht['ClimbRate'] = filtered_livevlucht['ClimbRate'].apply(lambda x: float(x.replace(',', '')) if isinstance(x, str) else x)
-
-    # Vervang NaN-waarden in de kolom 'ClimbRate' door 0
-    filtered_livevlucht['ClimbRate'] = filtered_livevlucht['ClimbRate'].fillna(0)
-
-    # Groepeer op FlightNumber en bereken de cumulatieve som per vluchtcode
-    filtered_livevlucht['cumsum_ClimbRate'] = filtered_livevlucht.groupby('FlightNumber')['ClimbRate'].cumsum()
-
-    # Normaliseer de cumulatieve som per vluchtcode
-    min_cumsum = filtered_livevlucht['cumsum_ClimbRate'].min()
-    max_cumsum = filtered_livevlucht['cumsum_ClimbRate'].max()
-
-    if min_cumsum != max_cumsum:
-        filtered_livevlucht['alt_norm'] = (filtered_livevlucht['cumsum_ClimbRate'] - min_cumsum) / (max_cumsum - min_cumsum)
-    else:
-        filtered_livevlucht['alt_norm'] = 0  # Als alle waardes gelijk zijn, kies een middenkleur
+    @st.cache_data
+    def load_data_fil():
+        return pd.read_csv("filtered_flight1.csv")
+    filtered_livevlucht = load_data_fil()
 
     # Definieer een kleurenschaal: rood (laag) → geel → blauw (hoog)
     colormap = linear.RdYlBu_11.scale(0, 0.7)
@@ -463,3 +460,135 @@ elif pagina == 'Vluchten':
 
     # Toon de kaart
     st_folium(map_obj, width=700, height=500)
+
+
+
+
+
+elif pagina == 'Geluid':
+    st.title("Overzicht SoundPlanes")
+    st.write("normale verdeling visualisatie")
+    st.title("")
+
+
+    A220= pd.read_csv("220.csv")
+    E90= pd.read_csv("E90.csv")
+    E175= pd.read_csv("E175.csv")
+    A321= pd.read_csv("321.csv")
+    B7378= pd.read_csv("7378.csv")
+    A320= pd.read_csv("320.csv")
+
+    df2= pd.read_csv("Hackaton2.csv")
+    Type_vliegtuig= {'EMJ-E90': 'Embraer-E90', '220-223': 'Airbus A220-300', '32S-32Q': 'Airbus A-321neo', 'EMJ-E7W':'Embraer-175', '73F-73K': 'Boeing 737-800', '737-73W': 'Boeing 737-700', '32S-320': 'Airbus A320-200' }
+    df['TypeVliegtuig']= df['aircraftType.iataMain']+ '-' + df['aircraftType.iataSub']
+    df['ModelVliegtuig']= df['TypeVliegtuig'].map(Type_vliegtuig)
+    stedenlijst2= ['Antwerpen', 'Brussel', 'Frankfort', 'Parijs']
+    SubStedenHackaton = df['Stad'].isin(stedenlijst2)
+    Subvliegtuigtypen= df.loc[SubStedenHackaton, ['ModelVliegtuig']].value_counts()
+    fig10= px.pie(df2, names='ModelVliegtuig', title="Soorten Vliegtuig")
+    st.plotly_chart(fig10)
+
+    Air220= data['type'].isin(A220)
+    dbA320=data.loc[Air220, ['SEL_dB']].agg(['mean', 'min', 'max', 'std', 'median'])
+
+    E90= data['type'].isin(E90)
+    dbA320=data.loc[E90, ['SEL_dB']].agg(['mean', 'min', 'max', 'std', 'median'])
+
+    E175= data['type'].isin(E175)
+    dbA320=data.loc[E175, ['SEL_dB']].agg(['mean', 'min', 'max', 'std', 'median'])
+
+    A321= data['type'].isin(A321)
+    dbA320=data.loc[A321, ['SEL_dB']].agg(['mean', 'min', 'max', 'std', 'median'])
+
+    B7378= data['type'].isin(B7378)
+    dbA320=data.loc[B7378, ['SEL_dB']].agg(['mean', 'min', 'max', 'std', 'median'])
+
+    Air320= data['type'].isin(A320)
+    dbA320=data.loc[Air320, ['SEL_dB']].agg(['mean', 'min', 'max', 'std', 'median'])
+
+    from PIL import Image
+
+# Title of the Streamlit app
+    st.title('6 Images in 2 Columns and 3 Rows')
+
+# Create 2 columns
+    col1, col2 = st.columns(2)
+
+    # In the first column (col1) place the first 3 images
+    with col1:
+
+        image1 = Image.open("boeing 737-800.jpg")  # Replace with your actual image path
+        st.image(image1, caption="boeing 737-800", use_container_width=True)
+
+        # Image 2
+        image2 = Image.open("A321.jpg")
+        st.image(image2, caption="A321", use_container_width=True)
+
+        # Image 3
+        image3 = Image.open("A320.jpg")
+        st.image(image3, caption="A320",  use_container_width=True)
+
+    # In the second column (col2) place the other 3 images
+    with col2:
+        # Image 4
+        image4 = Image.open("A220.jpg")
+        st.image(image4, caption="A220", use_container_width=True)
+
+        # Image 5
+        image5 = Image.open("E90.jpg")
+        st.image(image5, caption="E90", use_container_width=True)
+
+        # Image 6
+        image6 = Image.open("E175.jpg")
+        st.image(image6, caption="E175", use_container_width=True)
+
+
+# Gegeven data
+    totale_sel_voor = 117.19710174279471
+    totale_sel_na = 117.1652868299973
+    sel_nutteloze_vluchten = 95.82966825644425
+    vermindering_sel = 0.03181491279741522
+
+    # Gegeven waarden voor de grafiek
+    voor = 117.19710174279471
+    na = 117.1652868299973
+
+    # Maak de indeling met 2 kolommen
+    col1, col2 = st.columns([1, 2])  # Kolom 1 is kleiner, kolom 2 is groter
+
+    # Toon de metrics in de eerste kolom (links)
+    with col1:
+        st.metric("Totale SEL Voor", f"{totale_sel_voor:.4f} dB")
+        st.metric("Totale SEL Na", f"{totale_sel_na:.4f} dB")
+        st.metric("SEL 'Nutteloze' Vluchten", f"{sel_nutteloze_vluchten:.4f} dB")
+        st.metric("Vermindering in SEL", f"{vermindering_sel:.4f} dB")
+
+    # Maak een figuur voor de grafiek
+    fig, ax = plt.subplots()
+
+    # Teken de horizontale lijnen
+    ax.axhline(y=voor, color='blue', linestyle='--', label='Voor')
+    ax.axhline(y=na, color='red', linestyle='--', label='Na')
+
+    # Voeg labels en titel toe
+    ax.set_xlabel('X-as')
+    ax.set_ylabel('Y-as')
+    ax.set_title('Horizontale lijnen')
+
+    # Stel het zoomniveau in
+    ax.set_ylim(117.140, 117.230)
+
+    ax.annotate('', xy=(0.5, na), xytext=(0.5, voor),
+            arrowprops=dict(facecolor='black', edgecolor='black', arrowstyle='<->', lw=1.5))
+    
+    ax.text(0.55, (voor + na) / 2, '0.03', ha='center', va='center', fontsize=12, color='black')
+
+    ax.get_xaxis().set_visible(False)
+
+    # Toon de legenda
+    ax.legend()
+
+    # Toon de grafiek in de tweede kolom (rechts)
+    with col2:
+        st.pyplot(fig)
+
