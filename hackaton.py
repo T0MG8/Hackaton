@@ -21,7 +21,7 @@ df = load_data_api()
 
 @st.cache_data
 def load_data_loc():
-    return pd.read_csv("flights_today_master.csv")
+    return pd.read_csv("flights_today_master2.csv")
 livevlucht = load_data_loc()
 
 @st.cache_data
@@ -55,9 +55,6 @@ df['Stad'] = df['route.destinations'].map(mapping2)
 df['Land'] = df['route.destinations'].map(mapping3)
 
 df = df[['aircraftRegistration', 'route.destinations', 'Luchthaven', 'Stad', 'Land', 'flightName']]
-stedenlijst= ['Parijs', 'Brussel', 'Antwerpen', 'Praag', 'Londen', 'Hamburg', 'Frankfurt', 'Wenen', 'Luxemburg', 'Milaan', 'Venetië', 'Berlijn', 'München', 'Luxemburg-stad', 'Zurich', 'Marseille', 'Nice', 'Kopenhagen', 'Geneve', 'Luxemburg-Stad']
-StedenHackaton= df['Stad'].isin(stedenlijst)
-filtered_df = df.loc[StedenHackaton,'Stad']
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -188,6 +185,7 @@ if pagina == 'Inleiding':
     # Toon grafiek in Streamlit
     st.plotly_chart(fig8)
 
+
     stad_kleuren = {
         'Londen': 'blue',
         'Parijs': 'red',
@@ -288,6 +286,14 @@ elif pagina == 'Vluchten':
             'KLM1360', 'KLM1358', 'SAS549', 'EZY7938', 'KLM1270']
     alle = noord + oost + zuid
 
+    # Maak een DataFrame voor een overzicht (optioneel)
+    data = {
+        'Regio': ['Noord', 'Oost', 'Zuid', 'Totaal'],
+        'Aantal Vluchten': [len(noord), len(oost), len(zuid), len(alle)]
+    }
+    aankomst = pd.DataFrame(data)
+    st.dataframe(aankomst)
+
     # Streamlit dropdown voor regio-keuze
     keuze = st.selectbox("Kies een regio", ["Alle vluchten", "Noord", "Oost", "Zuid"])
     if keuze == "Alle vluchten":
@@ -299,12 +305,7 @@ elif pagina == 'Vluchten':
     else:
         gewenste_vluchtcodes = zuid
 
-    # Maak een DataFrame voor een overzicht (optioneel)
-    data = {
-        'Regio': ['Noord', 'Oost', 'Zuid', 'Totaal'],
-        'Aantal Vluchten': [len(noord), len(oost), len(zuid), len(alle)]
-    }
-    aankomst = pd.DataFrame(data)
+
 
     # Definieer kleuren per stad
     stad_kleuren = {
@@ -414,11 +415,29 @@ elif pagina == 'Vluchten':
                      {lightredstreep} Venetië | {darkbluestreep} Milaan | {lightgreenstreep} Geneve | {darkvioletstreep} Zürich |<br>\
                         {beigestreep} Wenen | {lightgraystreep} Praag | {goldstreep} Kopenhagen", unsafe_allow_html=True)
 
-    st.dataframe(aankomst)
-
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    # Filter de dataframe op de gewenste vluchtcodes
+    filtered_livevlucht = livevlucht[livevlucht['FlightNumber'].isin(gewenste_vluchtcodes)]
+
+    filtered_livevlucht['ClimbRate'] = filtered_livevlucht['ClimbRate'].apply(lambda x: float(x.replace(',', '')) if isinstance(x, str) else x)
+
+    # Vervang NaN-waarden in de kolom 'ClimbRate' door 0
+    filtered_livevlucht['ClimbRate'] = filtered_livevlucht['ClimbRate'].fillna(0)
+
+    # Groepeer op FlightNumber en bereken de cumulatieve som per vluchtcode
+    filtered_livevlucht['cumsum_ClimbRate'] = filtered_livevlucht.groupby('FlightNumber')['ClimbRate'].cumsum()
+
+    # Normaliseer de cumulatieve som per vluchtcode
+    min_cumsum = filtered_livevlucht['cumsum_ClimbRate'].min()
+    max_cumsum = filtered_livevlucht['cumsum_ClimbRate'].max()
+
+    if min_cumsum != max_cumsum:
+        filtered_livevlucht['alt_norm'] = (filtered_livevlucht['cumsum_ClimbRate'] - min_cumsum) / (max_cumsum - min_cumsum)
+    else:
+        filtered_livevlucht['alt_norm'] = 0  # Als alle waardes gelijk zijn, kies een middenkleur
 
     # Definieer een kleurenschaal: rood (laag) → geel → blauw (hoog)
     colormap = linear.RdYlBu_11.scale(0, 0.7)
@@ -427,7 +446,7 @@ elif pagina == 'Vluchten':
     map_obj = folium.Map(location=[52.3053, 4.7458], zoom_start=10)
 
     # Voeg cirkels toe op basis van de cumulatieve som van ClimbRate per vluchtcode
-    for _, row in livevlucht.iterrows():
+    for _, row in filtered_livevlucht.iterrows():
         folium.CircleMarker(
                 location=[row['Latitude'], row['Longitude']],
             radius=5,  # Pas dit aan voor grotere/kleinere cirkels
