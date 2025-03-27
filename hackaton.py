@@ -81,7 +81,10 @@ df['Land'] = df['route.destinations'].map(mapping3)
 
 pagina = st.sidebar.radio("Selecteer een pagina", ['Inleiding', 'Onderbouwing', 'Vluchten', 'Geluid'])
 if pagina == 'Inleiding':
-    st.title('Welke '"nutteloze"' vluchten kan Schiphol schrappen in Europa om het geluidsoverlast te verminderen rondom Schiphol.')
+    st.title('Draagt het schrappen van overbodige Europese vluchten bij aan het verminderen van geluidsoverlast rondom Schiphol?')
+    st.write('1. Welke Europese vluchten vanaf Schiphol kunnen als overbodig of vervangbaar worden beschouwd?')
+    st.write('2. Welke gebieden ervaren de meeste geluidsoverlast van overbodige Europese vluchten?')
+    st.write('3. Hoeveel geluidsoverlast wordt veroorzaakt zonder overbodige Europese vluchten?')
 
 # Gegevens
     labels = ['Europa', 'Internationaal']
@@ -103,15 +106,20 @@ if pagina == 'Inleiding':
     # Weergeven in Streamlit
     st.plotly_chart(fig)
 
+    st.title('Bronnen')
+    st.write('- Schiphol API')
+    st.write('- Wikipedia IATA-codes')
+    st.write('- ')
+    st.write('- ')
+
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 if pagina == 'Onderbouwing':
-    # Titel van de app
     st.title("Interactieve Kaart met Steden en Spoorlijnen")
 
-    # Coördinaten Schiphol
+# Coördinaten Schiphol
     latitude = 52.3676
     longitude = 4.9041
 
@@ -121,7 +129,10 @@ if pagina == 'Onderbouwing':
     # Kaart aanmaken
     m = folium.Map(location=[latitude, longitude], zoom_start=4)
 
-    # Cirkel toevoegen
+    # Cirkel toevoegen aan een FeatureGroup, zodat deze later in/uitgeschakeld kan worden
+    circle_group = folium.FeatureGroup(name="Cirkel", show=False)
+
+    # Cirkel toevoegen aan de groep
     folium.Circle(
         location=[latitude, longitude],
         radius=radius,  
@@ -129,9 +140,11 @@ if pagina == 'Onderbouwing':
         fill=True,
         fill_color='blue',
         fill_opacity=0.3
-    ).add_to(m)
+    ).add_to(circle_group)
 
-        # OpenRailWay toevoegen
+
+
+    # OpenRailWay toevoegen
     folium.TileLayer(
         tiles='https://tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
         attr='&copy; OpenRailwayMap contributors',
@@ -139,35 +152,67 @@ if pagina == 'Onderbouwing':
         overlay=True 
     ).add_to(m)
 
-    # Markers toevoegen
-    steden = {
-        "Amsterdam": (52.3676, 4.9041),
-        "Antwerpen": (51.2194475, 4.4024643),
-            "Brussel": (50.8465573, 4.351697),
-    "Hamburg": (53.5510846, 9.9936819),
-        "Berlijn": (52.5170365, 13.3888599),
-            "München": (48.1351253, 11.5819805),
-    "Luxemburg-stad": (49.6294233, 6.0211741),
-            "Nice": (43.7009385, 7.2683912),
-        "Marseille": (43.296482, 5.36978),
-    "Venetië": (45.4408474, 12.3155151),
-        "Milaan": (45.4668, 9.1905),
-        "Geneve": (46.2043907, 6.1431577),
-        "Zurich": (47.3744489, 8.5410422),
-        "Wenen": (48.2081743, 16.3738189),
-        "Praag": (50.0755381, 14.4378005),
-        "Londen": (51.507351, -0.12766),
-        "Kopenhagen": (55.6760968, 12.5683371),
-        "Parijs": (48.856663, 2.351556),
-        "Frankfurt": (50.1109221, 8.6821267)
-    }
+    railway_group = folium.FeatureGroup(name="Railways", show=False)
 
+    # Kleuren voor de steden
+    stad_kleuren = {
+    'Londen': 'blue',
+    'Parijs': 'red',
+    'Hamburg': 'green',
+    'Berlijn': 'purple',
+    'München': 'orange',
+    'Frankfurt': 'pink',
+    'Brussel': 'yellow',
+    'Luxemburg': 'brown',
+    'Nice': 'lightblue',
+    'Marseille': 'darkgreen',
+    'Venetië': 'lightcoral',
+    'Milaan': 'darkblue',
+    'Geneve': 'lightgreen',
+    'Zürich': 'darkviolet',
+    'Wenen': 'beige',
+    'Praag': 'lightgray',
+    'Kopenhagen': 'gold'
+}
+
+# Markers toevoegen aan een FeatureGroup
+    marker_group = folium.FeatureGroup(name="Steden", show=False)
+
+    # Markers toevoegen aan de groep
+    steden = {
+    "Amsterdam": (52.3676, 4.9041),
+    "Antwerpen": (51.2194475, 4.4024643),
+    "Brussel": (50.8465573, 4.351697),
+    "Hamburg": (53.5510846, 9.9936819),
+    "Berlijn": (52.5170365, 13.3888599),
+    "München": (48.1351253, 11.5819805),
+    "Luxemburg-stad": (49.6294233, 6.0211741),
+    "Nice": (43.7009385, 7.2683912),
+    "Marseille": (43.296482, 5.36978),
+    "Venetië": (45.4408474, 12.3155151),
+    "Milaan": (45.4668, 9.1905),
+    "Geneve": (46.2043907, 6.1431577),
+    "Zurich": (47.3744489, 8.5410422),
+    "Wenen": (48.2081743, 16.3738189),
+    "Praag": (50.0755381, 14.4378005),
+    "Londen": (51.507351, -0.12766),
+    "Kopenhagen": (55.6760968, 12.5683371),
+    "Parijs": (48.856663, 2.351556),
+    "Frankfurt": (50.1109221, 8.6821267)
+}
+
+# Voeg markers toe aan de marker groep
     for stad, coords in steden.items():
         folium.Marker(
             location=coords,
             popup=stad,
-            tooltip=stad
-        ).add_to(m)
+            tooltip=stad,
+            icon=folium.Icon(color=stad_kleuren.get(stad, 'gray'))
+        ).add_to(marker_group)
+
+    # Voeg de marker groep en cirkel groep toe aan de kaart
+    marker_group.add_to(m)
+    circle_group.add_to(m)
 
     # Layer control toevoegen
     folium.LayerControl().add_to(m)
@@ -176,74 +221,69 @@ if pagina == 'Onderbouwing':
     folium_static(m)
 
 
+
     # ---------------------------------------------------------------------------------------------------------------------------------------------
 
     # ---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
     st.title("Visualisatie van de Steden Verdeler")
 
-    stedenlijst= ['Parijs', 'Brussel', 'Antwerpen', 'Praag', 'Londen', 'Hamburg', 'Frankfurt', 'Wenen', 'Luxemburg', 'Milaan', 'Venetië', 'Berlijn', 'München', 'Luxemburg-stad', 'Zurich', 'Marseille', 'Nice', 'Kopenhagen', 'Geneve', 'Luxemburg-Stad']
-    StedenHackaton= df['Stad'].isin(stedenlijst)
-    filtered_df = df.loc[StedenHackaton,'Stad']
+    stedenlijst= ['Parijs', 'Brussel', 'Praag', 'Londen', 'Hamburg', 'Frankfurt', 'Wenen', 'Luxemburg', 'Milaan', 'Venetië', 'Berlijn', 'München', 'Zurich', 'Marseille', 'Nice', 'Kopenhagen']
+    aantal_vluchten = [28, 25, 13, 39, 15, 18, 11, 6, 10, 8, 17, 24, 22, 4, 8, 21, ]
 
 
+# Zorg ervoor dat elke stad een kleur krijgt uit de dict (standaard blauw als niet gedefinieerd)
+    kleuren = [stad_kleuren.get(stad, 'royalblue') for stad in stedenlijst]
 
-    # Maak histogram met Plotly
+# Maak een staafdiagram met Plotly
     fig8 = go.Figure()
 
-    # Voeg histogram-trace toe
-    fig8.add_trace(go.Histogram(x=filtered_df, marker=dict(color='royalblue')))
+    fig8.add_trace(go.Bar(
+    x=stedenlijst,
+    y=aantal_vluchten,
+    marker=dict(color=kleuren),
+    name="Aantal vluchten"
+))
 
-    # Layout instellingen
+# Layout instellingen
     fig8.update_layout(
-        title="Verdeling van Steden in de Dataset",
-        xaxis_title="Steden",
-        yaxis_title="Aantal",
-        xaxis=dict(tickangle=45),
-        bargap=0.1
-    )
+    title="Verdeling van Aantal Vluchten per Stad",
+    xaxis_title="Steden",
+    yaxis_title="Aantal Vluchten",
+    xaxis=dict(tickangle=45),
+    bargap=0.2
+)
 
-    # Toon grafiek in Streamlit
+# Toon de grafiek in Streamlit
     st.plotly_chart(fig8)
 
 
-    stad_kleuren = {
-        'Londen': 'blue',
-        'Parijs': 'red',
-        'Hamburg': 'green',
-        'Berlijn': 'purple',
-        'München': 'orange',
-        'Frankfurt': 'pink',
-        'Brussel': 'yellow',
-        'Luxemburg': 'brown',
-        'Nice': 'lightblue',
-        'Marseille': 'darkgreen',
-        'Venetië': 'lightred',
-        'Milaan': 'darkblue',
-        'Geneve': 'lightgreen',
-        'Zürich': 'darkviolet',
-        'Wenen': 'beige',
-        'Praag': 'lightgray',
-        'Kopenhagen': 'gold'
-    }
+
 
     df4= pd.read_csv("ReisTijd.csv", sep=",")
 
+# Maak de barplot
     fig = px.bar(
     df4, 
     x="Bestemming", 
     y="TijdVerschil_min", 
     title="Tijdverschil per Bestemming",
-    labels={"Bestemming": "Bestemming", "TijdVerschil_min": "Tijdverschil in Minuten"})
+    labels={"Bestemming": "Bestemming", "TijdVerschil_min": "Tijdverschil in Minuten"},
+    color="TijdVerschil_min",  # Kleuren bepalen op basis van TijdVerschil_min
+    color_continuous_scale='RdYlGn'  # Kies een kleurenpalet, bijv. 'Viridis'
+)
 
 # Draai de x-as labels 90 graden
     fig.update_layout(
-        xaxis_tickangle=-90
+    xaxis_tickangle=-90
 )
 
 # Streamlit weergeven
     st.title('Barplot van Tijdverschil per Bestemming') 
     st.plotly_chart(fig)
+
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -424,7 +464,9 @@ elif pagina == 'Vluchten':
     st.markdown(f"{blauwstreep} London | {redstreep} Parijs | {greenstreep} Hamburg | {purplestreep} Berlijn | {orangestreep} München |\
                 {pinkstreep} Frankfurt | {yellowstreep} Brussel <br>| {brownstreep} Luxemburg | {lightbluestreep} Nice | {darkgreenstreep} Marseille |\
                      {lightredstreep} Venetië | {darkbluestreep} Milaan | {lightgreenstreep} Geneve | {darkvioletstreep} Zürich |<br>\
-                        {beigestreep} Wenen | {lightgraystreep} Praag | {goldstreep} Kopenhagen", unsafe_allow_html=True)
+                        {beigestreep} Wenen | {lightgraystreep} Praag | {goldstreep} Kopenhagen<br>\
+                        <br>\
+                            <br>", unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -435,6 +477,7 @@ elif pagina == 'Vluchten':
     def load_data_fil():
         return pd.read_csv("filtered_flight1.csv")
     filtered_livevlucht = load_data_fil()
+
 
     # Definieer een kleurenschaal: rood (laag) → geel → blauw (hoog)
     colormap = linear.RdYlBu_11.scale(0, 0.7)
@@ -461,15 +504,8 @@ elif pagina == 'Vluchten':
     # Toon de kaart
     st_folium(map_obj, width=700, height=500)
 
-
-
-
-
 elif pagina == 'Geluid':
-    st.title("Overzicht SoundPlanes")
-    st.write("normale verdeling visualisatie")
-    st.title("")
-
+    st.title("MOET NOG TEKST")
 
     A220= pd.read_csv("220.csv")
     E90= pd.read_csv("E90.csv")
@@ -509,7 +545,7 @@ elif pagina == 'Geluid':
     from PIL import Image
 
 # Title of the Streamlit app
-    st.title('6 Images in 2 Columns and 3 Rows')
+    st.title('MOET NOG TEKST')
 
 # Create 2 columns
     col1, col2 = st.columns(2)
@@ -543,6 +579,11 @@ elif pagina == 'Geluid':
         st.image(image6, caption="E175", use_container_width=True)
 
 
+    image7 = Image.open("formule.jpg")
+    st.image(image7)
+    st.write('')
+    st.write('')
+    st.write('')
 # Gegeven data
     totale_sel_voor = 117.19710174279471
     totale_sel_na = 117.1652868299973
