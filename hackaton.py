@@ -117,7 +117,7 @@ if pagina == 'Inleiding':
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 if pagina == 'Onderbouwing':
-    st.title("Interactieve Kaart met Steden en Spoorlijnen")
+    st.title("MOET NOG EEN TEKST")
 
 # Coördinaten Schiphol
     latitude = 52.3676
@@ -228,7 +228,7 @@ if pagina == 'Onderbouwing':
 
 
 
-    st.title("Visualisatie van de Steden Verdeler")
+    st.title("MOET NOG EEN TEKST")
 
     stedenlijst= ['Parijs', 'Brussel', 'Praag', 'Londen', 'Hamburg', 'Frankfurt', 'Wenen', 'Luxemburg', 'Milaan', 'Venetië', 'Berlijn', 'München', 'Zurich', 'Marseille', 'Nice', 'Kopenhagen']
     aantal_vluchten = [28, 25, 13, 39, 15, 18, 11, 6, 10, 8, 17, 24, 22, 4, 8, 21, ]
@@ -281,7 +281,7 @@ if pagina == 'Onderbouwing':
 )
 
 # Streamlit weergeven
-    st.title('Barplot van Tijdverschil per Bestemming') 
+    st.title('MOET NOG EEN TEKST') 
     st.plotly_chart(fig)
 
 
@@ -291,6 +291,10 @@ if pagina == 'Onderbouwing':
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
 elif pagina == 'Vluchten':
+
+    st.title("MOET NOG EEN TEKST")
+    st.write("MOET NOG TEKST")
+
     @st.cache_data
     def load_flight_data():
         return {
@@ -354,6 +358,9 @@ elif pagina == 'Vluchten':
     }
     aankomst = pd.DataFrame(aantal)
     st.dataframe(aankomst)
+
+
+    st.write("MOET NOG TEKST")
 
     # Streamlit dropdown voor regio-keuze
     gewenste_vluchtcodes = alle
@@ -472,6 +479,8 @@ elif pagina == 'Vluchten':
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+    st.write("MOET NOG TEKST")
+
     @st.cache_data
     def load_data_fil():
         return pd.read_csv("filtered_flight1.csv")
@@ -543,21 +552,28 @@ elif pagina == 'Vluchten':
 elif pagina == 'Geluid':
     st.title("MOET NOG TEKST")
 
-    A220= pd.read_csv("220.csv")
-    E90= pd.read_csv("E90.csv")
-    E175= pd.read_csv("E175.csv")
-    A321= pd.read_csv("321.csv")
-    B7378= pd.read_csv("7378.csv")
-    A320= pd.read_csv("320.csv")
+    @st.cache_data
+    def t_data():
+        A220 = pd.read_csv("220.csv")
+        E90 = pd.read_csv("E90.csv")
+        E175 = pd.read_csv("E175.csv")
+        A321 = pd.read_csv("321.csv")
+        B7378 = pd.read_csv("7378.csv")
+        A320 = pd.read_csv("320.csv")
+        df2 = pd.read_csv("Hackaton2.csv")
+    
+        return A220, E90, E175, A321, B7378, A320, df2
 
-    df2= pd.read_csv("Hackaton2.csv")
+# Data ophalen uit cache
+    A220, E90, E175, A321, B7378, A320, df2 = t_data()
+
     Type_vliegtuig= {'EMJ-E90': 'Embraer-E90', '220-223': 'Airbus A220-300', '32S-32Q': 'Airbus A-321neo', 'EMJ-E7W':'Embraer-175', '73F-73K': 'Boeing 737-800', '737-73W': 'Boeing 737-700', '32S-320': 'Airbus A320-200' }
     df['TypeVliegtuig']= df['aircraftType.iataMain']+ '-' + df['aircraftType.iataSub']
     df['ModelVliegtuig']= df['TypeVliegtuig'].map(Type_vliegtuig)
     stedenlijst2= ['Antwerpen', 'Brussel', 'Frankfort', 'Parijs']
     SubStedenHackaton = df['Stad'].isin(stedenlijst2)
     Subvliegtuigtypen= df.loc[SubStedenHackaton, ['ModelVliegtuig']].value_counts()
-    fig10= px.pie(df2, names='ModelVliegtuig', title="Soorten Vliegtuig")
+    fig10= px.pie(df2, names='ModelVliegtuig', title="st.title('MOET NOG TEKST')")
     st.plotly_chart(fig10)
 
     Air220= data['type'].isin(A220)
@@ -614,7 +630,7 @@ elif pagina == 'Geluid':
         image6 = Image.open("E175.jpg")
         st.image(image6, caption="E175", use_container_width=True)
 
-
+    st.title('MOET NOG TEKST')
     image7 = Image.open("formule.jpg")
     st.image(image7)
     st.write('')
@@ -629,6 +645,9 @@ elif pagina == 'Geluid':
     # Gegeven waarden voor de grafiek
     voor = 117.19710174279471
     na = 117.1652868299973
+
+
+    st.title('MOET NOG TEKST')
 
     # Maak de indeling met 2 kolommen
     col1, col2 = st.columns([1, 2])  # Kolom 1 is kleiner, kolom 2 is groter
