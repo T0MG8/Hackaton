@@ -109,15 +109,18 @@ if pagina == 'Inleiding':
     st.title('Bronnen')
     st.write('- Schiphol API')
     st.write('- Wikipedia IATA-codes')
-    st.write('- ')
-    st.write('- ')
+    st.write('- Sensornet')
+    st.write('- OpenSky')
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     #-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 if pagina == 'Onderbouwing':
-    st.title("MOET NOG EEN TEKST")
+    st.title("Draagt het schrappen van overbodige Europese vluchten bij aan het verminderen van geluidsoverlast rondom Schiphol?")
+    st.write("")
+    st.write("")
+    st.write("")
 
 # Coördinaten Schiphol
     latitude = 52.3676
@@ -217,6 +220,8 @@ if pagina == 'Onderbouwing':
     # Layer control toevoegen
     folium.LayerControl().add_to(m)
 
+
+    st.write("**Definitie van overbodige vluchten**")
     # Streamlit-kaart weergeven
     folium_static(m)
 
@@ -225,10 +230,6 @@ if pagina == 'Onderbouwing':
     # ---------------------------------------------------------------------------------------------------------------------------------------------
 
     # ---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-    st.title("MOET NOG EEN TEKST")
 
     stedenlijst= ['Parijs', 'Brussel', 'Praag', 'Londen', 'Hamburg', 'Frankfurt', 'Wenen', 'Luxemburg', 'Milaan', 'Venetië', 'Berlijn', 'München', 'Zurich', 'Marseille', 'Nice', 'Kopenhagen']
     aantal_vluchten = [28, 25, 13, 39, 15, 18, 11, 6, 10, 8, 17, 24, 22, 4, 8, 21, ]
@@ -281,7 +282,6 @@ if pagina == 'Onderbouwing':
 )
 
 # Streamlit weergeven
-    st.title('MOET NOG EEN TEKST') 
     st.plotly_chart(fig)
 
 
@@ -292,8 +292,9 @@ if pagina == 'Onderbouwing':
 
 elif pagina == 'Vluchten':
 
-    st.title("MOET NOG EEN TEKST")
-    st.write("MOET NOG TEKST")
+    st.title("Welke gebieden ervaren de meeste geluidsoverlast van overbodige Europese vluchten?")
+    st.write("")
+    st.write("**Welke richting landen de vluchten?**")
 
     @st.cache_data
     def load_flight_data():
@@ -360,7 +361,7 @@ elif pagina == 'Vluchten':
     st.dataframe(aankomst)
 
 
-    st.write("MOET NOG TEKST")
+    st.write("**Vluchtroutes in kaart**")
 
     # Streamlit dropdown voor regio-keuze
     gewenste_vluchtcodes = alle
@@ -479,7 +480,7 @@ elif pagina == 'Vluchten':
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    st.write("MOET NOG TEKST")
+    st.write("**Landingskaart**")
 
     @st.cache_data
     def load_data_fil():
@@ -550,7 +551,7 @@ elif pagina == 'Vluchten':
 
 
 elif pagina == 'Geluid':
-    st.title("MOET NOG TEKST")
+    st.title("Hoeveel geluidsoverlast wordt veroorzaakt zonder overbodige Europese vluchten?")
 
     @st.cache_data
     def t_data():
@@ -573,7 +574,7 @@ elif pagina == 'Geluid':
     stedenlijst2= ['Antwerpen', 'Brussel', 'Frankfort', 'Parijs']
     SubStedenHackaton = df['Stad'].isin(stedenlijst2)
     Subvliegtuigtypen= df.loc[SubStedenHackaton, ['ModelVliegtuig']].value_counts()
-    fig10= px.pie(df2, names='ModelVliegtuig', title="st.title('MOET NOG TEKST')")
+    fig10= px.pie(df2, names='ModelVliegtuig', title="Soorten vliegtuigtypes per substeden")
     st.plotly_chart(fig10)
 
     Air220= data['type'].isin(A220)
@@ -596,8 +597,15 @@ elif pagina == 'Geluid':
 
     from PIL import Image
 
+    st.write('**Formule berekening SEL**')
+    image7 = Image.open("formule.jpg")
+    st.image(image7)
+    st.write('')
+    st.write('')
+    st.write('')
+
 # Title of the Streamlit app
-    st.title('MOET NOG TEKST')
+    st.write('**Gemiddelde geluidsdata van vliegtuigsoorten**')
 
 # Create 2 columns
     col1, col2 = st.columns(2)
@@ -630,12 +638,7 @@ elif pagina == 'Geluid':
         image6 = Image.open("E175.jpg")
         st.image(image6, caption="E175", use_container_width=True)
 
-    st.title('MOET NOG TEKST')
-    image7 = Image.open("formule.jpg")
-    st.image(image7)
-    st.write('')
-    st.write('')
-    st.write('')
+
 # Gegeven data
     totale_sel_voor = 117.19710174279471
     totale_sel_na = 117.1652868299973
@@ -647,44 +650,9 @@ elif pagina == 'Geluid':
     na = 117.1652868299973
 
 
-    st.title('MOET NOG TEKST')
+    st.title('**Conclusie geluidsbesparing**')
 
-    # Maak de indeling met 2 kolommen
-    col1, col2 = st.columns([1, 2])  # Kolom 1 is kleiner, kolom 2 is groter
-
-    # Toon de metrics in de eerste kolom (links)
-    with col1:
-        st.metric("Totale SEL Voor", f"{totale_sel_voor:.4f} dB")
-        st.metric("Totale SEL Na", f"{totale_sel_na:.4f} dB")
-        st.metric("SEL 'Nutteloze' Vluchten", f"{sel_nutteloze_vluchten:.4f} dB")
-        st.metric("Vermindering in SEL", f"{vermindering_sel:.4f} dB")
-
-    # Maak een figuur voor de grafiek
-    fig, ax = plt.subplots()
-
-    # Teken de horizontale lijnen
-    ax.axhline(y=voor, color='blue', linestyle='--', label='Voor')
-    ax.axhline(y=na, color='red', linestyle='--', label='Na')
-
-    # Voeg labels en titel toe
-    ax.set_xlabel('X-as')
-    ax.set_ylabel('Y-as')
-    ax.set_title('Horizontale lijnen')
-
-    # Stel het zoomniveau in
-    ax.set_ylim(117.140, 117.230)
-
-    ax.annotate('', xy=(0.5, na), xytext=(0.5, voor),
-            arrowprops=dict(facecolor='black', edgecolor='black', arrowstyle='<->', lw=1.5))
-    
-    ax.text(0.55, (voor + na) / 2, '0.03', ha='center', va='center', fontsize=12, color='black')
-
-    ax.get_xaxis().set_visible(False)
-
-    # Toon de legenda
-    ax.legend()
-
-    # Toon de grafiek in de tweede kolom (rechts)
-    with col2:
-        st.pyplot(fig)
-
+    st.metric("Totale SEL Voor", f"{totale_sel_voor:.4f} dB")
+    st.metric("Totale SEL Na", f"{totale_sel_na:.4f} dB")
+    st.metric("SEL 'Nutteloze' Vluchten", f"{sel_nutteloze_vluchten:.4f} dB")
+    st.metric("Vermindering in SEL", f"{vermindering_sel:.4f} dB")
